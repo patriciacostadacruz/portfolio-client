@@ -4,7 +4,8 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 export default function Navbar() {
   const handleScrollToTop = () => {
     scroll.scrollToTop({
-      smooth: true,
+      // acceleration until halfway, then deceleration
+      smooth: 'easeInOutQuart',
     });
   };
 
@@ -25,7 +26,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={700}
+            duration={1000}
           >
             Expertise
           </Link>
@@ -38,7 +39,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={700}
+            duration={1000}
           >
             Projects
           </Link>
@@ -51,7 +52,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={700}
+            duration={1000}
           >
             Work experience
           </Link>
@@ -64,7 +65,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={700}
+            duration={1000}
           >
             References
           </Link>
@@ -77,7 +78,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={700}
+            duration={1000}
           >
             Contact
           </Link>
