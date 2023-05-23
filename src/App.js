@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './views/HomePage';
+import MainPage from './views/MainPage';
 import Navbar from './components/Navbar';
 import ErrorPage from './views/ErrorPage';
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

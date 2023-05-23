@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HomePage() {
+export default function MainPage() {
   return (
     <div className="portfolio-container">
       <div id="home" className="portfolio-home-section">
