@@ -27,7 +27,8 @@
   font-size: 1em;
 }
 
-.navbar-button:hover {
+.navbar-button:hover,
+.navbar-options:hover {
   cursor: pointer;
 }
 

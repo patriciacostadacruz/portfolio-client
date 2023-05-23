@@ -19,6 +19,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            className="navbar-options"
             activeClass="active"
             to="expertise"
             spy={true}
@@ -31,6 +32,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            className="navbar-options"
             activeClass="active"
             to="projects"
             spy={true}
@@ -43,6 +45,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            className="navbar-options"
             activeClass="active"
             to="experience"
             spy={true}
@@ -55,6 +58,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            className="navbar-options"
             activeClass="active"
             to="references"
             spy={true}
@@ -67,6 +71,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            className="navbar-options"
             activeClass="active"
             to="contact"
             spy={true}
