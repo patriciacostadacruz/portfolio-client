@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 export default function Navbar() {
   const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
+    scroll.scrollToTop({
+      smooth: true,
     });
   };
 
@@ -18,19 +18,64 @@ export default function Navbar() {
           </button>
         </li>
         <li>
-          <a href="#expertise">Expertise</a>
+          <Link
+            activeClass="active"
+            to="expertise"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          >
+            Expertise
+          </Link>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          >
+            Projects
+          </Link>
         </li>
         <li>
-          <a href="#experience">Work experience</a>
+          <Link
+            activeClass="active"
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          >
+            Work experience
+          </Link>
         </li>
         <li>
-          <a href="#references">References</a>
+          <Link
+            activeClass="active"
+            to="references"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          >
+            References
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </div>
