@@ -3,13 +3,13 @@ import React from 'react';
 export default function HomePage() {
   return (
     <div className="portfolio-container">
-      <div className="portfolio-home-section">
+      <div id="home" className="portfolio-home-section">
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
           Software engineer, front & back end app developer.
         </p>
       </div>
-      <div className="portfolio-expertise-section">
+      <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">Expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
@@ -26,7 +26,7 @@ export default function HomePage() {
           </section>
         </div>
       </div>
-      <div className="portfolio-projects-section">
+      <div id="projects" className="portfolio-projects-section">
         <h3 className="section-name">Projects</h3>
         {/* add dynamic image */}
         {/* filter to be added*/}
@@ -101,7 +101,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="portfolio-experience-section">
+      <div id="experience" className="portfolio-experience-section">
         <h3 className="section-name">Experience</h3>
         <div className="experiences-container">
           <div className="experience-container">
@@ -138,7 +138,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="portfolio-references-section">
+      <div id="references" className="portfolio-references-section">
         <h3 className="section-name">References</h3>
         <div className="references-container">
           <div className="reference-container">
@@ -153,7 +153,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="portfolio-contact-section">
+      <div id="contact" className="portfolio-contact-section">
         <h3 className="section-name">
           Have an exciting project you need help with? Looking for a motivated
           and organized, fast learner web developer?
