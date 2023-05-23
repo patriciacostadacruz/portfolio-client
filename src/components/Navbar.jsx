@@ -1,13 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="navbar-container">
       <ul className="navbar-items">
         <p>My logo</p>
         <li>
-          <Link to="/">Home</Link>
+          <button className="navbar-button" onClick={handleScrollToTop}>
+            Home
+          </button>
         </li>
         <li>
           <a href="#expertise">Expertise</a>
