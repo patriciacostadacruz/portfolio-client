@@ -7,10 +7,18 @@
 
 .navbar-container {
   box-shadow: 2px 2px 2px white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 
 .navbar-items {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.portfolio-container {
+  margin-top: 100px;
 }

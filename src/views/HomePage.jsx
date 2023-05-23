@@ -8,21 +8,22 @@ export default function HomePage() {
         <p className="my-presentation">
           Software engineer, front & back end app developer.
         </p>
+        {/* some image */}
       </div>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">Expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
             <h4>Front end</h4>
-            <p>Bladibla</p>
+            <p>HTML - CSS - JavaScript - React</p>
           </section>
           <section className="skill-container">
             <h4>Back end</h4>
-            <p>Bladibla</p>
+            <p>Express - Node</p>
           </section>
           <section className="skill-container">
             <h4>Tools & softwares</h4>
-            <p>Bladibla</p>
+            <p>MongoDB - Postman - Swagger - Jira</p>
           </section>
         </div>
       </div>
