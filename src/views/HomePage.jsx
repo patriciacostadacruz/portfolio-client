@@ -31,73 +31,87 @@ export default function HomePage() {
         <h3 className="section-name">Projects</h3>
         {/* add dynamic image */}
         {/* filter to be added*/}
-        <article>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </article>
         <div className="projects-container">
           <div className="project-container">
             <img src="" alt="proj img" />
-            <h4>Project title</h4>
+            <h4>Hubble's quest</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              After Hubble telescope was launched in 1990, alien populations
+              have started being attacked by some alien monster. Aspart of the
+              Independant Wizards Mission (IWM), you player is charged with a
+              mission: go to planet BetaX-2 and kill the enemies to allow
+              friendly and nice aliens to live in peace. <br />
+              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript
             </p>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              See project
+            <a
+              href="https://patriciacostadacruz.github.io/Hubble-s-quest/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See game
             </a>
           </div>
           <div className="project-container">
             <img src="" alt="proj img" />
-            <h4>Project title</h4>
+            <h4>Food-Folio</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Food-Folio is a recipes app which allows users to see a wide
+              variety of recipes and cooking steps, but also allows them to add
+              their own recipes and save their favorites for quick access.
+              <br />
+              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
+              Handlebars
+              <br />
+              <strong>Back-end tech stack:</strong> Node - Express - MongoDB
             </p>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              See project
+            <a
+              href="https://food-folio-app.fly.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See app
             </a>
           </div>
           <div className="project-container">
             <img src="" alt="proj img" />
-            <h4>Project title</h4>
+            <h4>investMate</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              investMate connects entrepreneurs and investors worldwide so that
+              innovative ideas become successfull businesses.
+              <br />
+              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
+              Charts.js - React
+              <br />
+              <strong>Back-end tech stack:</strong> Node - Express - MongoDB
+              <br />
+              <strong>Additonal tools used:</strong> Postman
             </p>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              See project
+            <a
+              href="https://investmate-pro.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See app
             </a>
           </div>
           <div className="project-container">
             <img src="" alt="proj img" />
-            <h4>Project title</h4>
+            <h4>Firebase recipes app</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Recipes app created as a training for Firebase apps using its
+              different services such as functions, auth, hosting, storage, etc.
             </p>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              See project
+            <br />
+            <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
+            React - Firebase
+            <br />
+            <strong>Back-end tech stack:</strong> Node - Firebase
+            <a
+              href="https://fir-recipes-3f7d9.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See app
             </a>
           </div>
         </div>
@@ -108,7 +122,7 @@ export default function HomePage() {
           <div className="experience-container">
             <div className="experience-header">
               {/* add logic to display detail when clicking on title */}
-              <h5 className="experience-title">Job name @ company name</h5>
+              <h4 className="experience-title">Job name @ company name</h4>
               <p className="experience-dates">2019 - present</p>
             </div>
             <div className="experience-detail">
