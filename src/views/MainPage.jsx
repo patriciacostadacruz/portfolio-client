@@ -215,14 +215,48 @@ export default function MainPage() {
         <h3 className="section-name">My references</h3>
         <div className="references-container">
           <div className="reference-container">
-            <div className="reference-text">
-              <p>Blablabla</p>
-              <p>Reference giver</p>
-              <p>Position & company</p>
-            </div>
-            <div className="reference-image">
-              <img src="" alt="Ref giver avatar" />
-            </div>
+            <p>
+              "Patricia is a self starter and go getter. She’s got a good
+              attitude and is well liked by her teammates. I admire her passion
+              for development and know she will make a positive impact wherever
+              she goes."
+            </p>
+            <a href="https://www.linkedin.com/in/gregory-alexander-b7970025/">
+              Gregory Alexander
+            </a>
+            <p>AMS Sr Manager Global Technical Services @ ADP</p>
+          </div>
+          <div className="reference-container">
+            <p>
+              "From the first day, it was clear that Patri was not just one more
+              student. She is a bright person and has worked hard, and has
+              helped create a great environment with her classmates, always
+              helping anyone in need. Ambitious and perfectionist, Patri has the
+              best mindset for the programming world. I am sure the future holds
+              incredible things for you, Patri!!"
+            </p>
+            <a href="https://www.linkedin.com/in/ale-bausa/">
+              Alejandra Bausá Carmona
+            </a>
+            <p>Full stack web developer and teacher @ Freelance</p>
+          </div>
+          <div className="reference-container">
+            <p>
+              "If you combine hard work, analytical mindset, positive attitude,
+              willingness to help and strive for the best results all the
+              time... you get Patricia. Her work always went above and beyond my
+              expectations and during the last 1,5 year I had a pleasure to
+              guide Patricia, she managed to make a big footprint in our team.
+              Patricia is very motivated, fast learner with great work ethics
+              and big dreams. Her humor and empathy fostered a comforting work
+              environment. I have no doubt that Patricia will continue to excel
+              in her future endeavors and highly recommend her to any potential
+              employer."
+            </p>
+            <a href="https://www.linkedin.com/in/%C5%A1tefan-halas-115b7658/">
+              Stefan Halas
+            </a>
+            <p>EMEA Manager Global Technical Sevrices @ ADP</p>
           </div>
         </div>
       </div>
