@@ -6,13 +6,13 @@ import ErrorPage from './views/ErrorPage';
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

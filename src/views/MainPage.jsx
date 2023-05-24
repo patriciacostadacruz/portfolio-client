@@ -62,7 +62,11 @@ export default function MainPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={experience.logo} alt="Company logo" />
+                <img
+                  src={experience.logo}
+                  style={{ height: '50px' }}
+                  alt="Company logo"
+                />
               </a>
             )}
           </section>
@@ -89,6 +93,11 @@ export default function MainPage() {
 
   return (
     <div className="portfolio-container">
+      <div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </div>
       <div id="home" className="portfolio-home-section">
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
