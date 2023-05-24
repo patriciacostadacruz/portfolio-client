@@ -274,9 +274,15 @@ export default function MainPage() {
           >
             LinkedIn
           </a>
+          <a
+            href="https://github.com/patriciacostadacruz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
           {/* add email form */}
           <a href="mailto:patriciacstcz@gmail.com">Email</a>
-          <a href="https://github.com/patriciacostadacruz">GitHub</a>
         </div>
       </div>
     </div>
