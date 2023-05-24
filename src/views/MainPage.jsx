@@ -221,7 +221,11 @@ export default function MainPage() {
               for development and know she will make a positive impact wherever
               she goes."
             </p>
-            <a href="https://www.linkedin.com/in/gregory-alexander-b7970025/">
+            <a
+              href="https://www.linkedin.com/in/gregory-alexander-b7970025/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Gregory Alexander
             </a>
             <p>AMS Sr Manager Global Technical Services @ ADP</p>
@@ -235,7 +239,11 @@ export default function MainPage() {
               best mindset for the programming world. I am sure the future holds
               incredible things for you, Patri!!"
             </p>
-            <a href="https://www.linkedin.com/in/ale-bausa/">
+            <a
+              href="https://www.linkedin.com/in/ale-bausa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Alejandra Bausá Carmona
             </a>
             <p>Full stack web developer and teacher @ Freelance</p>
@@ -253,7 +261,11 @@ export default function MainPage() {
               in her future endeavors and highly recommend her to any potential
               employer."
             </p>
-            <a href="https://www.linkedin.com/in/%C5%A1tefan-halas-115b7658/">
+            <a
+              href="https://www.linkedin.com/in/%C5%A1tefan-halas-115b7658/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Stefan Halas
             </a>
             <p>EMEA Manager Global Technical Sevrices @ ADP</p>
