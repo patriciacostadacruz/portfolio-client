@@ -1,4 +1,6 @@
 import React from 'react';
+import ADPlogo from '../images/adp-logo.png';
+import interrogationPoint from '../images/interrogation-point.png';
 
 export default function MainPage() {
   return (
@@ -6,29 +8,48 @@ export default function MainPage() {
       <div id="home" className="portfolio-home-section">
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
-          Software engineer, front & back end app developer.
+          Software engineer, front & back end web apps developer.
         </p>
         {/* some image */}
       </div>
       <div id="expertise" className="portfolio-expertise-section">
-        <h3 className="section-name">Expertise</h3>
+        <h3 className="section-name">My expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
-            <h4>Front end</h4>
-            <p>HTML - CSS - JavaScript - React</p>
+            <h4>Front end development</h4>
+            <ul className="skills-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Firebase</li>
+            </ul>
           </section>
           <section className="skill-container">
-            <h4>Back end</h4>
-            <p>Express - Node</p>
+            <h4>Back end development</h4>
+            <ul className="skills-list">
+              <li>JavaScript</li>
+              <li>Express</li>
+              <li>Node</li>
+              <li>Firebase</li>
+            </ul>
           </section>
           <section className="skill-container">
-            <h4>Tools & softwares</h4>
-            <p>MongoDB - Postman - Swagger - Jira</p>
+            <h4>Tools, softwares & processes</h4>
+            <ul className="skills-list">
+              <li>MongoDB</li>
+              <li>Postman</li>
+              <li>Hira</li>
+              <li>Swagger API</li>
+              <li>Ubuntu OS</li>
+              <li>JWT</li>
+              <li>Agile methodologies</li>
+            </ul>
           </section>
         </div>
       </div>
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">Projects</h3>
+        <h3 className="section-name">My projects</h3>
         {/* add dynamic image */}
         {/* filter to be added*/}
         <div className="projects-container">
@@ -117,27 +138,64 @@ export default function MainPage() {
         </div>
       </div>
       <div id="experience" className="portfolio-experience-section">
-        <h3 className="section-name">Experience</h3>
+        <h3 className="section-name">My experience</h3>
         <div className="experiences-container">
           <div className="experience-container">
             <div className="experience-header">
               {/* add logic to display detail when clicking on title */}
-              <h4 className="experience-title">Job name @ company name</h4>
-              <p className="experience-dates">2019 - present</p>
+              <h4 className="experience-title">
+                Front-end developer @ CookEatLike
+              </h4>
+              <p className="experience-dates">May 2023 - present</p>
             </div>
             <div className="experience-detail">
               <section className="experience-data">
                 <p className="experience-description">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores et quas molestias excepturi sint occaecati cupiditate
-                  non provident, similique sunt in culpa qui officia deserunt
-                  mollitia animi, id est laborum et dolorum fuga.{' '}
+                  Working with two friends on a cooking streaming app side
+                  project. I am in charge of creating the front-end logic. We
+                  have regular meetups to discuss our goals, progress, next
+                  steps and exchange opinions and knowledge.{' '}
                 </p>
                 <span className="experience-tags">
-                  <p className="skill-tag">Bla</p>
-                  <p className="skill-tag">Bla</p>
-                  <p className="skill-tag">Bla</p>
+                  <p className="skill-tag">HTML</p>
+                  <p className="skill-tag">CSS</p>
+                  <p className="skill-tag">JavaScript</p>
+                  <p className="skill-tag">React</p>
+                  <p className="skill-tag">JWT</p>
+                </span>
+              </section>
+              <section className="experience-company">
+                <img src={interrogationPoint} alt="Company logo" />
+              </section>
+            </div>
+          </div>
+          <div className="experience-container">
+            <div className="experience-header">
+              {/* add logic to display detail when clicking on title */}
+              <h4 className="experience-title">
+                Technica Application Analyst II @ ADP Iberia
+              </h4>
+              <p className="experience-dates">October 2021 - present</p>
+            </div>
+            <div className="experience-detail">
+              <section className="experience-data">
+                <p className="experience-description">
+                  Internal T2 level support for a Time & Attendance software
+                  named Enterprise eTime. Diagnose and resolve issues related to
+                  software configuration and upgrade, databases, servers,
+                  interfaces, federation/login into the system , etc - for
+                  high-profile clients.{' '}
+                </p>
+                <span className="experience-tags">
+                  <p className="skill-tag">JSON</p>
+                  <p className="skill-tag">SAML</p>
+                  <p className="skill-tag">Oracle SQL Dev</p>
+                  <p className="skill-tag">Postman</p>
+                  <p className="skill-tag">Provisioning</p>
+                  <p className="skill-tag">SaaS</p>
+                  <p className="skill-tag">SSO</p>
+                  <p className="skill-tag">Jira</p>
+                  <p className="skill-tag">Team work</p>
                 </span>
               </section>
               <section className="experience-company">
@@ -146,7 +204,7 @@ export default function MainPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="" alt="Company logo" />
+                  <img src={ADPlogo} alt="Company logo" />
                 </a>
               </section>
             </div>
@@ -154,7 +212,7 @@ export default function MainPage() {
         </div>
       </div>
       <div id="references" className="portfolio-references-section">
-        <h3 className="section-name">References</h3>
+        <h3 className="section-name">My references</h3>
         <div className="references-container">
           <div className="reference-container">
             <div className="reference-text">
