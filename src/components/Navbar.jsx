@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
@@ -5,7 +6,7 @@ export default function Navbar() {
   const handleScrollToTop = () => {
     scroll.scrollToTop({
       // acceleration until halfway, then deceleration
-      smooth: 'easeInOutQuart',
+      smooth: 'true',
     });
   };
 
@@ -15,7 +16,7 @@ export default function Navbar() {
         <p>My logo</p>
         <li>
           <button className="navbar-button" onClick={handleScrollToTop}>
-            Home
+            // home
           </button>
         </li>
         <li>
@@ -28,7 +29,7 @@ export default function Navbar() {
             offset={-100}
             duration={1000}
           >
-            Expertise
+            // expertise
           </Link>
         </li>
         <li>
@@ -41,7 +42,7 @@ export default function Navbar() {
             offset={-100}
             duration={1000}
           >
-            Projects
+            // projects
           </Link>
         </li>
         <li>
@@ -54,7 +55,7 @@ export default function Navbar() {
             offset={-100}
             duration={1000}
           >
-            Work experience
+            // work experience
           </Link>
         </li>
         <li>
@@ -67,7 +68,7 @@ export default function Navbar() {
             offset={-100}
             duration={1000}
           >
-            References
+            // references
           </Link>
         </li>
         <li>
@@ -80,7 +81,7 @@ export default function Navbar() {
             offset={-100}
             duration={1000}
           >
-            Contact
+            // contact
           </Link>
         </li>
       </ul>

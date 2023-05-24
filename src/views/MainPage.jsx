@@ -37,8 +37,8 @@ export default function MainPage() {
             <h4>Hubble's quest</h4>
             <p>
               After Hubble telescope was launched in 1990, alien populations
-              have started being attacked by some alien monster. Aspart of the
-              Independant Wizards Mission (IWM), you player is charged with a
+              have started being attacked by some alien monster. As part of the
+              Independant Wizards Mission (IWM), your player is charged with a
               mission: go to planet BetaX-2 and kill the enemies to allow
               friendly and nice aliens to live in peace. <br />
               <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript
