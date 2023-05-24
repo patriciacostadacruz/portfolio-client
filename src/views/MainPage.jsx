@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import projects from '../data';
-import images from '../images';
+import { projects, experiences, references } from '../data';
 
 export default function MainPage() {
+  // starts displaying first image of each project
   const [currentSlides, setCurrentSlides] = useState(projects.map(() => 0));
 
   const handlePreviousSlide = (index) => {
@@ -34,6 +34,57 @@ export default function MainPage() {
         className="active-slide"
       />
     );
+  };
+
+  const renderExperiences = () => {
+    return experiences.map((experience, index) => (
+      <div className="experience-container" key={index}>
+        <div className="experience-header">
+          <h4 className="experience-title">{experience.title}</h4>
+          <p className="experience-dates">{experience.dates}</p>
+        </div>
+        <div className="experience-detail">
+          <section className="experience-data">
+            <p className="experience-description">{experience.description}</p>
+            <h5>Main skills used:</h5>
+            <span className="experience-tags">
+              {experience.tags.map((tag, index) => (
+                <p className="skill-tag" key={index}>
+                  {tag}
+                </p>
+              ))}
+            </span>
+          </section>
+          <section className="experience-company">
+            {experience.logo && (
+              <a
+                href={experience.link ? experience.link : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={experience.logo} alt="Company logo" />
+              </a>
+            )}
+          </section>
+        </div>
+      </div>
+    ));
+  };
+
+  const renderReferences = () => {
+    return references.map((reference, index) => (
+      <div className="reference-container" key={index}>
+        <p>{reference.content}</p>
+        {reference.link ? (
+          <a href={reference.link} target="_blank" rel="noopener noreferrer">
+            {reference.giver}
+          </a>
+        ) : (
+          <span>{reference.giver}</span>
+        )}
+        <p>{reference.title}</p>
+      </div>
+    ));
   };
 
   return (
@@ -128,7 +179,12 @@ export default function MainPage() {
                         {project.backEndTechStack}
                       </p>
                     )}
-                    <a href={project.link} className="project-link">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
                       See project
                     </a>
                   </div>
@@ -139,138 +195,11 @@ export default function MainPage() {
       </div>
       <div id="experience" className="portfolio-experience-section">
         <h3 className="section-name">My experience</h3>
-        <div className="experiences-container">
-          <div className="experience-container">
-            <div className="experience-header">
-              {/* add logic to display detail when clicking on title */}
-              <h4 className="experience-title">
-                Front-end developer @ CookEatLike
-              </h4>
-              <p className="experience-dates">May 2023 - present</p>
-            </div>
-            <div className="experience-detail">
-              <section className="experience-data">
-                <p className="experience-description">
-                  Working with two friends on a cooking streaming app side
-                  project. I am in charge of creating the front-end logic. We
-                  have regular meetups to discuss our goals, progress, next
-                  steps and exchange opinions and knowledge.{' '}
-                </p>
-                <span className="experience-tags">
-                  <p className="skill-tag">HTML</p>
-                  <p className="skill-tag">CSS</p>
-                  <p className="skill-tag">JavaScript</p>
-                  <p className="skill-tag">React</p>
-                  <p className="skill-tag">JWT</p>
-                </span>
-              </section>
-              <section className="experience-company">
-                <img src={images.interrogationPoint} alt="Company logo" />
-              </section>
-            </div>
-          </div>
-          <div className="experience-container">
-            <div className="experience-header">
-              {/* add logic to display detail when clicking on title */}
-              <h4 className="experience-title">
-                Technica Application Analyst II @ ADP Iberia
-              </h4>
-              <p className="experience-dates">October 2021 - present</p>
-            </div>
-            <div className="experience-detail">
-              <section className="experience-data">
-                <p className="experience-description">
-                  Internal T2 level support for a Time & Attendance software
-                  named Enterprise eTime. Diagnose and resolve issues related to
-                  software configuration and upgrade, databases, servers,
-                  interfaces, federation/login into the system , etc - for
-                  high-profile clients.{' '}
-                </p>
-                <span className="experience-tags">
-                  <p className="skill-tag">JSON</p>
-                  <p className="skill-tag">SAML</p>
-                  <p className="skill-tag">Oracle SQL Dev</p>
-                  <p className="skill-tag">Postman</p>
-                  <p className="skill-tag">Provisioning</p>
-                  <p className="skill-tag">SaaS</p>
-                  <p className="skill-tag">SSO</p>
-                  <p className="skill-tag">Jira</p>
-                  <p className="skill-tag">Team work</p>
-                </span>
-              </section>
-              <section className="experience-company">
-                <a
-                  href="https://www.adp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={images.ADPlogo} alt="Company logo" />
-                </a>
-              </section>
-            </div>
-          </div>
-        </div>
+        <div className="experiences-container">{renderExperiences()}</div>
       </div>
       <div id="references" className="portfolio-references-section">
         <h3 className="section-name">My references</h3>
-        <div className="references-container">
-          <div className="reference-container">
-            <p>
-              "Patricia is a self starter and go getter. She’s got a good
-              attitude and is well liked by her teammates. I admire her passion
-              for development and know she will make a positive impact wherever
-              she goes."
-            </p>
-            <a
-              href="https://www.linkedin.com/in/gregory-alexander-b7970025/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gregory Alexander
-            </a>
-            <p>AMS Sr Manager Global Technical Services @ ADP</p>
-          </div>
-          <div className="reference-container">
-            <p>
-              "From the first day, it was clear that Patri was not just one more
-              student. She is a bright person and has worked hard, and has
-              helped create a great environment with her classmates, always
-              helping anyone in need. Ambitious and perfectionist, Patri has the
-              best mindset for the programming world. I am sure the future holds
-              incredible things for you, Patri!!"
-            </p>
-            <a
-              href="https://www.linkedin.com/in/ale-bausa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Alejandra Bausá Carmona
-            </a>
-            <p>Full stack web developer and teacher @ Freelance</p>
-          </div>
-          <div className="reference-container">
-            <p>
-              "If you combine hard work, analytical mindset, positive attitude,
-              willingness to help and strive for the best results all the
-              time... you get Patricia. Her work always went above and beyond my
-              expectations and during the last 1,5 year I had a pleasure to
-              guide Patricia, she managed to make a big footprint in our team.
-              Patricia is very motivated, fast learner with great work ethics
-              and big dreams. Her humor and empathy fostered a comforting work
-              environment. I have no doubt that Patricia will continue to excel
-              in her future endeavors and highly recommend her to any potential
-              employer."
-            </p>
-            <a
-              href="https://www.linkedin.com/in/%C5%A1tefan-halas-115b7658/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Stefan Halas
-            </a>
-            <p>EMEA Manager Global Technical Sevrices @ ADP</p>
-          </div>
-        </div>
+        <div className="references-container">{renderReferences()}</div>
       </div>
       <div id="contact" className="portfolio-contact-section">
         <h3 className="section-name">
