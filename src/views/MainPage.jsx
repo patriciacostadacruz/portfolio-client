@@ -1,8 +1,29 @@
-import React from 'react';
-import ADPlogo from '../images/adp-logo.png';
-import interrogationPoint from '../images/interrogation-point.png';
+import React, { useState } from 'react';
+import projects from '../data';
+import images from '../images';
 
 export default function MainPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePreviousSlide = () => {
+    setCurrentSlide((prevSlide) => prevSlide - 1);
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prevSlide) => prevSlide + 1);
+  };
+
+  const renderSlides = (slides) => {
+    return slides.map((slide, index) => (
+      <img
+        key={index}
+        src={slide}
+        alt={`Slide ${index + 1}`}
+        className={index === currentSlide ? 'active-slide' : 'inactive-slide'}
+      />
+    ));
+  };
+
   return (
     <div className="portfolio-container">
       <div id="home" className="portfolio-home-section">
@@ -51,90 +72,52 @@ export default function MainPage() {
       <div id="projects" className="portfolio-projects-section">
         <h3 className="section-name">My projects</h3>
         {/* add dynamic image */}
-        {/* filter to be added*/}
         <div className="projects-container">
-          <div className="project-container">
-            <img src="" alt="proj img" />
-            <h4>Hubble's quest</h4>
-            <p>
-              After Hubble telescope was launched in 1990, alien populations
-              have started being attacked by some alien monster. As part of the
-              Independant Wizards Mission (IWM), your player is charged with a
-              mission: go to planet BetaX-2 and kill the enemies to allow
-              friendly and nice aliens to live in peace. <br />
-              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript
-            </p>
-            <a
-              href="https://patriciacostadacruz.github.io/Hubble-s-quest/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See game
-            </a>
-          </div>
-          <div className="project-container">
-            <img src="" alt="proj img" />
-            <h4>Food-Folio</h4>
-            <p>
-              Food-Folio is a recipes app which allows users to see a wide
-              variety of recipes and cooking steps, but also allows them to add
-              their own recipes and save their favorites for quick access.
-              <br />
-              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
-              Handlebars
-              <br />
-              <strong>Back-end tech stack:</strong> Node - Express - MongoDB
-            </p>
-            <a
-              href="https://food-folio-app.fly.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See app
-            </a>
-          </div>
-          <div className="project-container">
-            <img src="" alt="proj img" />
-            <h4>investMate</h4>
-            <p>
-              investMate connects entrepreneurs and investors worldwide so that
-              innovative ideas become successfull businesses.
-              <br />
-              <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
-              Charts.js - React
-              <br />
-              <strong>Back-end tech stack:</strong> Node - Express - MongoDB
-              <br />
-              <strong>Additonal tools used:</strong> Postman
-            </p>
-            <a
-              href="https://investmate-pro.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See app
-            </a>
-          </div>
-          <div className="project-container">
-            <img src="" alt="proj img" />
-            <h4>Firebase recipes app</h4>
-            <p>
-              Recipes app created as a training for Firebase apps using its
-              different services such as functions, auth, hosting, storage, etc.
-            </p>
-            <br />
-            <strong>Front-end tech stack:</strong> HTML - CSS - JavaScript -
-            React - Firebase
-            <br />
-            <strong>Back-end tech stack:</strong> Node - Firebase
-            <a
-              href="https://fir-recipes-3f7d9.web.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See app
-            </a>
-          </div>
+          {projects.length > 1 &&
+            projects.map((project, index) => {
+              return (
+                <div key={index} className="project-container">
+                  <div className="slideshow-container">
+                    {project.slides.length > 1 && renderSlides(project.slides)}
+                    <div className="slide-buttons">
+                      <button
+                        className="previous-slide-btn"
+                        onClick={handlePreviousSlide}
+                        disabled={currentSlide === 0}
+                      >
+                        Previous
+                      </button>
+                      <button
+                        className="next-slide-btn"
+                        onClick={handleNextSlide}
+                        disabled={currentSlide === 0}
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                  <div className="project-data-container">
+                    <h4 className="project-title">{project.title}</h4>
+                    <p className="project-description">{project.description}</p>
+                    {project.frontEndTechStack && (
+                      <p>
+                        <strong>Front end stack:</strong>{' '}
+                        {project.frontEndTechStack}
+                      </p>
+                    )}
+                    {project.backEndTechStack && (
+                      <p>
+                        <strong>Front end stack:</strong>{' '}
+                        {project.backEndTechStack}
+                      </p>
+                    )}
+                    <a href={project.link} className="project-link">
+                      See project
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
       <div id="experience" className="portfolio-experience-section">
@@ -165,7 +148,7 @@ export default function MainPage() {
                 </span>
               </section>
               <section className="experience-company">
-                <img src={interrogationPoint} alt="Company logo" />
+                <img src={images.interrogationPoint} alt="Company logo" />
               </section>
             </div>
           </div>
@@ -204,7 +187,7 @@ export default function MainPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={ADPlogo} alt="Company logo" />
+                  <img src={images.ADPlogo} alt="Company logo" />
                 </a>
               </section>
             </div>
