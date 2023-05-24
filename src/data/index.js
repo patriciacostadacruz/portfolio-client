@@ -34,7 +34,7 @@ const projects = [
       'Recipes app created as a training for Firebase apps using its different services such as functions, auth, hosting, storage, etc.',
     frontEndTechStack: 'HTML - CSS - JavaScript - React - Firebase',
     backEndTechStack: 'Node - Firebase',
-    slides: [images.firebase1, images.firebase2, images.firebase3],
+    slides: [],
     link: 'https://fir-recipes-3f7d9.web.app/',
   },
 ];

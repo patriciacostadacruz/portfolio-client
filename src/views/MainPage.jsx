@@ -3,25 +3,37 @@ import projects from '../data';
 import images from '../images';
 
 export default function MainPage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlides, setCurrentSlides] = useState(projects.map(() => 0));
 
-  const handlePreviousSlide = () => {
-    setCurrentSlide((prevSlide) => prevSlide - 1);
+  const handlePreviousSlide = (index) => {
+    setCurrentSlides((prevSlides) =>
+      prevSlides.map((prevSlide, i) =>
+        i === index && prevSlide > 0 ? prevSlide - 1 : prevSlide
+      )
+    );
   };
 
-  const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) => prevSlide + 1);
+  const handleNextSlide = (index) => {
+    setCurrentSlides((prevSlides) =>
+      prevSlides.map((prevSlide, i) =>
+        i === index && prevSlide < projects[i].slides.length - 1
+          ? prevSlide + 1
+          : prevSlide
+      )
+    );
   };
 
-  const renderSlides = (slides) => {
-    return slides.map((slide, index) => (
+  const renderSlides = (slides, index) => {
+    const currentImage = slides[currentSlides[index]];
+    return (
       <img
-        key={index}
-        src={slide}
-        alt={`Slide ${index + 1}`}
-        className={index === currentSlide ? 'active-slide' : 'inactive-slide'}
+        key={currentSlides[index]}
+        src={currentImage}
+        alt={`Slide ${currentSlides[index] + 1}`}
+        style={{ height: '450px', borderRadius: '15px' }}
+        className="active-slide"
       />
-    ));
+    );
   };
 
   return (
@@ -73,28 +85,33 @@ export default function MainPage() {
         <h3 className="section-name">My projects</h3>
         {/* add dynamic image */}
         <div className="projects-container">
-          {projects.length > 1 &&
+          {projects.length > 0 &&
             projects.map((project, index) => {
               return (
                 <div key={index} className="project-container">
                   <div className="slideshow-container">
-                    {project.slides.length > 1 && renderSlides(project.slides)}
-                    <div className="slide-buttons">
-                      <button
-                        className="previous-slide-btn"
-                        onClick={handlePreviousSlide}
-                        disabled={currentSlide === 0}
-                      >
-                        Previous
-                      </button>
-                      <button
-                        className="next-slide-btn"
-                        onClick={handleNextSlide}
-                        disabled={currentSlide === 0}
-                      >
-                        Next
-                      </button>
-                    </div>
+                    {project.slides.length > 0 &&
+                      renderSlides(project.slides, index)}
+                    {project.slides.length > 0 && (
+                      <div className="slide-buttons">
+                        <button
+                          className="previous-slide-btn"
+                          onClick={() => handlePreviousSlide(index)}
+                          disabled={currentSlides[index] === 0}
+                        >
+                          Previous
+                        </button>
+                        <button
+                          className="next-slide-btn"
+                          onClick={() => handleNextSlide(index)}
+                          disabled={
+                            currentSlides[index] === project.slides.length - 1
+                          }
+                        >
+                          Next
+                        </button>
+                      </div>
+                    )}
                   </div>
                   <div className="project-data-container">
                     <h4 className="project-title">{project.title}</h4>
