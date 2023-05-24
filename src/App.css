@@ -1,7 +1,7 @@
 /****** GLOBAL & BACKGROUND ******/
 
 * {
-  color: Black;
+  color: white;
   margin: 0;
   text-decoration: none;
   list-style-type: none;
@@ -17,13 +17,7 @@
 body {
   margin: auto;
   overflow: auto;
-  background: linear-gradient(
-    315deg,
-    rgb(0, 0, 0) 0%,
-    rgb(202, 121, 0) 38%,
-    rgb(255, 238, 0) 68%,
-    rgba(192, 0, 0, 0.5) 98%
-  );
+  background-color: rgba(0, 0, 0, 0.959);
   animation: gradient 20s ease infinite;
   background-size: 400% 400%;
   background-attachment: scroll;
@@ -46,7 +40,7 @@ body {
   border-radius: 1000% 1000% 0 0;
   position: fixed;
   width: 200%;
-  height: 12em;
+  height: 30em;
   animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
@@ -56,13 +50,13 @@ body {
 }
 
 .wave:nth-of-type(2) {
-  bottom: -1.25em;
+  bottom: -5em;
   animation: wave 18s linear reverse infinite;
   opacity: 0.8;
 }
 
 .wave:nth-of-type(3) {
-  bottom: -2.5em;
+  bottom: -10em;
   animation: wave 20s -1s reverse infinite;
   opacity: 0.4;
 }
@@ -92,7 +86,7 @@ body {
 /****** NAVBAR ******/
 
 .navbar-container {
-  background: rgba(231, 231, 231, 0.726);
+  background: rgba(59, 59, 59, 0.651);
   position: fixed;
   top: 0;
   right: 0;
@@ -105,6 +99,7 @@ body {
   justify-content: center;
   gap: 50px;
   align-items: center;
+  height: 100%;
 }
 
 .navbar-button {
@@ -117,3 +112,5 @@ body {
 .navbar-options:hover {
   cursor: pointer;
 }
+
+/****** SECTION ******/
