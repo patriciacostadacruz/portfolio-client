@@ -6,9 +6,7 @@
   text-decoration: none;
   list-style-type: none;
   font-family: 'Roboto Mono', monospace;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+  line-height: 28px;
 }
 
 .portfolio-container {
@@ -85,6 +83,11 @@ body {
   }
 }
 
+.section-name {
+  font-size: 3em;
+  margin: 100px 0;
+}
+
 /****** NAVBAR ******/
 
 .navbar-container {
@@ -119,6 +122,9 @@ body {
 .navbar-button:hover,
 .navbar-options:hover {
   cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
 }
 
 /****** INTRO ******/
@@ -163,7 +169,6 @@ body {
 
 .arrow-down {
   height: 100px;
-  margin-bottom: 70px;
 }
 
 .arrow-down:hover {
@@ -180,4 +185,30 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+/****** SKILLS ******/
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 15vw;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border-radius: 10px;
+  background-color: rgba(105, 105, 105, 0.507);
+  padding: 20px;
+}
+
+.skills-list li {
+  list-style-type: circle;
 }
