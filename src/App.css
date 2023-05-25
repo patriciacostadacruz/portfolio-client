@@ -11,13 +11,14 @@
 }
 
 .portfolio-container {
-  margin-top: 60px;
+  margin-top: 80px;
+  text-align: center;
 }
 
 body {
   margin: auto;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.959);
+  background-color: #1b1b22;
   animation: gradient 20s ease infinite;
   background-size: 400% 400%;
   background-attachment: scroll;
@@ -86,7 +87,8 @@ body {
 /****** NAVBAR ******/
 
 .navbar-container {
-  background: rgba(59, 59, 59, 0.651);
+  background-color: #1b1b22ad;
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   right: 0;
@@ -108,9 +110,22 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.navbar-items,
+.navbar-button {
+  letter-spacing: 2px;
+}
+
 .navbar-button:hover,
 .navbar-options:hover {
   cursor: pointer;
 }
 
-/****** SECTION ******/
+/****** INTRO ******/
+
+.my-avatar {
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.74);
+}

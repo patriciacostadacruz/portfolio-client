@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { projects, experiences, references } from '../data';
+import myPic from '../images/pro-selfie.jpg';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -103,7 +104,7 @@ export default function MainPage() {
         <p className="my-presentation">
           Software engineer, front & back end web apps developer.
         </p>
-        {/* some image */}
+        <img className="my-avatar" src={myPic} alt="My avatar" />
       </div>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
