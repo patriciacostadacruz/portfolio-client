@@ -100,11 +100,11 @@ export default function MainPage() {
         <div className="wave"></div>
       </div>
       <div id="home" className="portfolio-home-section">
+        <img className="my-avatar" src={myPic} alt="My avatar" />
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
           Software engineer, front & back end web apps developer.
         </p>
-        <img className="my-avatar" src={myPic} alt="My avatar" />
       </div>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
