@@ -160,3 +160,24 @@ body {
     transform: rotateY(360deg);
   }
 } */
+
+.arrow-down {
+  height: 100px;
+  margin-bottom: 70px;
+}
+
+.arrow-down:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

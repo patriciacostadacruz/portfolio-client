@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { projects, experiences, references } from '../data';
 import myPic from '../images/pro-selfie.jpg';
+import downArrow from '../images/arrow-down.png';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -106,6 +108,17 @@ export default function MainPage() {
           Software engineer, front & back end web apps developer.
         </p>
       </div>
+      <Link
+        className="navbar-options"
+        activeClass="active"
+        to="expertise"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={1000}
+      >
+        <img className="arrow-down" src={downArrow} alt="Down arrow" />
+      </Link>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
         <div className="skills-container">
