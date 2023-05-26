@@ -134,6 +134,10 @@ button:hover {
   text-decoration-thickness: 2px;
 }
 
+.navbar-items img {
+  height: 30px;
+}
+
 /****** INTRO ******/
 
 .portfolio-home-section {

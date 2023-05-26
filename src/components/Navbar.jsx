@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import laptop from '../images/laptop.png';
 
 export default function Navbar() {
   const handleScrollToTop = () => {
@@ -13,7 +14,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <ul className="navbar-items">
-        <p>My logo</p>
+        <img src={laptop} alt="Laptop icon" />
         <li>
           <button className="navbar-button" onClick={handleScrollToTop}>
             // home
