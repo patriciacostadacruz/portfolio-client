@@ -5,6 +5,8 @@ import myPic from '../images/pro-selfie.jpg';
 import downArrow from '../images/arrow-down.png';
 import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
+import arrowDown from '../images/arrow-down-exp.png';
+import arrowUp from '../images/arrow-up-exp.png';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -59,6 +61,11 @@ export default function MainPage() {
         >
           <h4 className="experience-title">{experience.title}</h4>
           <p className="experience-dates">{experience.dates}</p>
+          {showExperience === index ? (
+            <img className="arrow" src={arrowUp} alt="Arrow up" />
+          ) : (
+            <img className="arrow" src={arrowDown} alt="Arrow down" />
+          )}
         </div>
         {showExperience === index && (
           <div className="experience-detail">
