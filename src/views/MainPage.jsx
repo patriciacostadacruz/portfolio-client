@@ -8,6 +8,8 @@ import arrowRight from '../images/arrow-right.png';
 import arrowDown from '../images/arrow-down-exp.png';
 import arrowUp from '../images/arrow-up-exp.png';
 import emailjs from 'emailjs-com';
+import linkedIn from '../images/linkedin.png';
+import gitHub from '../images/github.png';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -295,20 +297,26 @@ export default function MainPage() {
         </h3>
         <h4>Feel free to reach out!</h4>
         <div className="contact-methods">
-          <a
-            href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/patriciacostadacruz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <div className="contact-line">
+            <img src={linkedIn} alt="LinkedIn" />
+            <a
+              href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div className="contact-line">
+            <img src={gitHub} alt="GitHub" />
+            <a
+              href="https://github.com/patriciacostadacruz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
           <div className="contact-form">
             <h4>Send me an email, I'll answer as soon as I can!</h4>
             <form onSubmit={sendEmail}>

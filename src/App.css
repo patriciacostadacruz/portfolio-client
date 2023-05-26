@@ -387,9 +387,20 @@ button:hover {
 .contact-methods {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.contact-methods img {
+  height: 30px;
+}
+
+.contact-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-sentance {
@@ -401,12 +412,17 @@ button:hover {
   background-color: black;
   border-radius: 5px;
   margin-bottom: 50px;
-  padding: 40px;
-  width: 40%;
+  padding: 20px;
+  width: 30%;
+}
+
+.portfolio-contact-section h4 {
+  font-size: 1.25em;
+  margin-bottom: 20px;
 }
 
 .contact-form h4 {
-  font-size: 1.25em;
+  font-size: 1.35em;
   margin-bottom: 20px;
 }
 
@@ -421,6 +437,8 @@ form {
 input,
 textarea {
   color: rgb(99, 99, 99);
+  border-radius: 5px;
+  border: 1px solid grey;
 }
 
 label {
