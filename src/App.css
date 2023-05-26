@@ -144,6 +144,7 @@ body {
 }
 
 .my-avatar {
+  margin: 10px 0 30px 0;
   border-radius: 50%;
   height: 350px;
   width: 350px;
@@ -193,7 +194,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0 15vw;
 }
@@ -204,9 +205,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  border-radius: 10px;
-  background-color: rgba(105, 105, 105, 0.507);
+  border: 2px solid rgba(167, 167, 167, 0.637);
   padding: 20px;
+  height: 190px;
+  width: 190px;
 }
 
 .skills-list li {

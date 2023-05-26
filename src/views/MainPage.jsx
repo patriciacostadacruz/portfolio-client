@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { projects, experiences, references } from '../data';
 import myPic from '../images/pro-selfie.jpg';
 import downArrow from '../images/arrow-down.png';
@@ -142,15 +142,14 @@ export default function MainPage() {
             </ul>
           </section>
           <section className="skill-container">
-            <h4>Tools, softwares & processes</h4>
+            <h4>Tools & softwares</h4>
             <ul className="skills-list">
               <li>MongoDB</li>
               <li>Postman</li>
-              <li>Hira</li>
+              <li>Jira</li>
               <li>Swagger API</li>
               <li>Ubuntu OS</li>
               <li>JWT</li>
-              <li>Agile methodologies</li>
             </ul>
           </section>
         </div>
