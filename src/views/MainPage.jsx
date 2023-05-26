@@ -3,6 +3,8 @@ import { Link } from 'react-scroll';
 import { projects, experiences, references } from '../data';
 import myPic from '../images/pro-selfie.jpg';
 import downArrow from '../images/arrow-down.png';
+import arrowLeft from '../images/arrow-left.png';
+import arrowRight from '../images/arrow-right.png';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -186,7 +188,7 @@ export default function MainPage() {
                           onClick={() => handlePreviousSlide(index)}
                           disabled={currentSlides[index] === 0}
                         >
-                          Previous
+                          <img src={arrowLeft} alt="Arrow left" />
                         </button>
                         <button
                           className="next-slide-btn"
@@ -195,7 +197,7 @@ export default function MainPage() {
                             currentSlides[index] === project.slides.length - 1
                           }
                         >
-                          Next
+                          <img src={arrowRight} alt="Arrow right" />
                         </button>
                       </div>
                     )}

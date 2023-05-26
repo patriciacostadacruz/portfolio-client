@@ -88,6 +88,15 @@ body {
   margin: 100px 0;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 /****** NAVBAR ******/
 
 .navbar-container {
@@ -109,9 +118,7 @@ body {
 }
 
 .navbar-button {
-  border: none;
   font-size: 1em;
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .navbar-items,
@@ -214,3 +221,5 @@ body {
 .skills-list li {
   list-style-type: circle;
 }
+
+/****** PROJECTS ******/
