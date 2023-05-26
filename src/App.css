@@ -65,19 +65,15 @@ body {
   2% {
     transform: translateX(1);
   }
-
   25% {
     transform: translateX(-25%);
   }
-
   50% {
     transform: translateX(-50%);
   }
-
   75% {
     transform: translateX(-25%);
   }
-
   100% {
     transform: translateX(1);
   }
@@ -136,6 +132,23 @@ button:hover {
 
 .navbar-items img {
   height: 30px;
+  animation-name: floating;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  /* defines a smooth easing curve that gives the floating effect */
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /****** INTRO ******/
