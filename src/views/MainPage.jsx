@@ -7,11 +7,17 @@ import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
 import arrowDown from '../images/arrow-down-exp.png';
 import arrowUp from '../images/arrow-up-exp.png';
+import emailjs from 'emailjs-com';
 
 export default function MainPage() {
   // starts displaying first image of each project
   const [currentSlides, setCurrentSlides] = useState(projects.map(() => 0));
   const [showExperience, setShowExperience] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   const handlePreviousSlide = (index) => {
     setCurrentSlides((prevSlides) =>
@@ -42,6 +48,32 @@ export default function MainPage() {
         className="active-slide"
       />
     );
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_v1x2fom',
+        'template_x43vcff',
+        e.target,
+        '1-bfXLBdlmKTvIDHx'
+      )
+      .then((result) => {
+        console.log('Email sent successfully!');
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+    e.target.reset();
   };
 
   const toggleExperience = (index) => {
@@ -267,8 +299,38 @@ export default function MainPage() {
           >
             GitHub
           </a>
-          {/* add email form */}
-          <a href="mailto:patriciacstcz@gmail.com">Email</a>
+          <div className="contact-form">
+            <h4>Contact form</h4>
+            <form onSubmit={sendEmail}>
+              <label>
+                Name
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                Message
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+              </label>
+              <button type="submit">Send email</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
