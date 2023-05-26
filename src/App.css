@@ -355,9 +355,65 @@ button:hover {
   margin: 20px;
 }
 
+/****** REFERENCES ******/
+
+.portfolio-references-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /****** CONTACT ******/
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-sentance {
+  margin: 50px 15%;
+  text-align: center;
+}
+
+.contact-form {
+  background-color: black;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 40px;
+  width: 40%;
+}
+
+.contact-form h4 {
+  font-size: 1.25em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
 input,
 textarea {
   color: rgb(99, 99, 99);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  background-color: rgb(255, 84, 21);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
 }

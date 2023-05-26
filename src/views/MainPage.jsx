@@ -176,8 +176,8 @@ export default function MainPage() {
       >
         <img className="arrow-down" src={downArrow} alt="Down arrow" />
       </Link>
+      <h3 className="section-name">My expertise</h3>
       <div id="expertise" className="portfolio-expertise-section">
-        <h3 className="section-name">My expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
             <h4 className="skills-title">Front end development</h4>
@@ -211,8 +211,8 @@ export default function MainPage() {
           </section>
         </div>
       </div>
+      <h3 className="section-name">My projects</h3>
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">My projects</h3>
         {/* add dynamic image */}
         <div className="projects-container">
           {projects.length > 0 &&
@@ -280,16 +280,16 @@ export default function MainPage() {
             })}
         </div>
       </div>
+      <h3 className="section-name">My experience</h3>
       <div id="experience" className="portfolio-experience-section">
-        <h3 className="section-name">My experience</h3>
         <div className="experiences-container">{renderExperiences()}</div>
       </div>
+      <h3 className="section-name">My references</h3>
       <div id="references" className="portfolio-references-section">
-        <h3 className="section-name">My references</h3>
         <div className="references-container">{renderReferences()}</div>
       </div>
       <div id="contact" className="portfolio-contact-section">
-        <h3 className="section-name">
+        <h3 className="contact-sentance">
           Have an exciting project you need help with? Looking for a motivated
           and organized, fast learner web developer?
         </h3>
@@ -310,10 +310,10 @@ export default function MainPage() {
             GitHub
           </a>
           <div className="contact-form">
-            <h4>Contact form</h4>
+            <h4>Send me an email, I'll answer as soon as I can!</h4>
             <form onSubmit={sendEmail}>
               <label>
-                Name
+                Your name
                 <input
                   type="text"
                   name="name"
@@ -322,7 +322,7 @@ export default function MainPage() {
                 />
               </label>
               <label>
-                Email
+                Your email
                 <input
                   type="email"
                   name="email"
@@ -331,11 +331,13 @@ export default function MainPage() {
                 />
               </label>
               <label>
-                Message
+                Your message
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  rows={5}
+                  cols={50}
                 ></textarea>
               </label>
               <button type="submit">Send email</button>
