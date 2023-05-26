@@ -28,15 +28,15 @@ const projects = [
     slides: [images.investmate1, images.investmate2, images.investmate3],
     link: 'https://investmate-pro.netlify.app/',
   },
-  {
-    title: 'Firebase recipes app',
-    description:
-      'Recipes app created as a training for Firebase apps using its different services such as functions, auth, hosting, storage, etc.',
-    frontEndTechStack: 'HTML - CSS - JavaScript - React - Firebase',
-    backEndTechStack: 'Node - Firebase',
-    slides: [],
-    link: 'https://fir-recipes-3f7d9.web.app/',
-  },
+  // {
+  //   title: 'Firebase recipes app',
+  //   description:
+  //     'Recipes app created as a training for Firebase apps using its different services such as functions, auth, hosting, storage, etc.',
+  //   frontEndTechStack: 'HTML - CSS - JavaScript - React - Firebase',
+  //   backEndTechStack: 'Node - Firebase',
+  //   slides: [],
+  //   link: 'https://fir-recipes-3f7d9.web.app/',
+  // },
 ];
 
 const experiences = [

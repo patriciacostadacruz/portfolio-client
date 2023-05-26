@@ -44,7 +44,7 @@ export default function MainPage() {
         key={currentSlides[index]}
         src={currentImage}
         alt={`Slide ${currentSlides[index] + 1}`}
-        style={{ height: '450px', borderRadius: '15px' }}
+        style={{ height: '300px', borderRadius: '25px' }}
         className="active-slide"
       />
     );
@@ -222,27 +222,35 @@ export default function MainPage() {
                   <div className="slideshow-container">
                     {project.slides.length > 0 &&
                       renderSlides(project.slides, index)}
-                    {project.slides.length > 0 && (
-                      <div className="slide-buttons">
-                        <button
-                          className="previous-slide-btn"
-                          onClick={() => handlePreviousSlide(index)}
-                          disabled={currentSlides[index] === 0}
-                        >
-                          <img src={arrowLeft} alt="Arrow left" />
-                        </button>
-                        <button
-                          className="next-slide-btn"
-                          onClick={() => handleNextSlide(index)}
-                          disabled={
-                            currentSlides[index] === project.slides.length - 1
-                          }
-                        >
-                          <img src={arrowRight} alt="Arrow right" />
-                        </button>
-                      </div>
-                    )}
                   </div>
+                  {project.slides.length > 0 && (
+                    <div className="slide-buttons">
+                      <button
+                        className="previous-slide-btn"
+                        onClick={() => handlePreviousSlide(index)}
+                        disabled={currentSlides[index] === 0}
+                      >
+                        <img
+                          src={arrowLeft}
+                          alt="Arrow left"
+                          className="arrow-left"
+                        />
+                      </button>
+                      <button
+                        className="next-slide-btn"
+                        onClick={() => handleNextSlide(index)}
+                        disabled={
+                          currentSlides[index] === project.slides.length - 1
+                        }
+                      >
+                        <img
+                          src={arrowRight}
+                          alt="Arrow right"
+                          className="arrow-right"
+                        />
+                      </button>
+                    </div>
+                  )}
                   <div className="project-data-container">
                     <h4 className="project-title">{project.title}</h4>
                     <p className="project-description">{project.description}</p>
