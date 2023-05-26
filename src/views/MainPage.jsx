@@ -58,22 +58,24 @@ export default function MainPage() {
     }));
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         'service_v1x2fom',
         'template_x43vcff',
         e.target,
         '1-bfXLBdlmKTvIDHx'
-      )
-      .then((result) => {
-        console.log('Email sent successfully!');
-      })
-      .catch((error) => {
-        console.error('Error sending email:', error);
+      );
+      console.log('Email sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
       });
-    e.target.reset();
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   };
 
   const toggleExperience = (index) => {
@@ -178,7 +180,7 @@ export default function MainPage() {
         <h3 className="section-name">My expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
-            <h4>Front end development</h4>
+            <h4 className="skills-title">Front end development</h4>
             <ul className="skills-list">
               <li>HTML</li>
               <li>CSS</li>
@@ -188,7 +190,7 @@ export default function MainPage() {
             </ul>
           </section>
           <section className="skill-container">
-            <h4>Back end development</h4>
+            <h4 className="skills-title">Back end development</h4>
             <ul className="skills-list">
               <li>JavaScript</li>
               <li>Express</li>
@@ -197,7 +199,7 @@ export default function MainPage() {
             </ul>
           </section>
           <section className="skill-container">
-            <h4>Tools & softwares</h4>
+            <h4 className="skills-title">Tools & softwares</h4>
             <ul className="skills-list">
               <li>MongoDB</li>
               <li>Postman</li>

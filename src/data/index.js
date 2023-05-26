@@ -89,7 +89,7 @@ const references = [
       'If you combine hard work, analytical mindset, positive attitude, willingness to help and strive for the best results all the time... you get Patricia. Her work always went above and beyond my expectations and during the last 1,5 year I had a pleasure to guide Patricia, she managed to make a big footprint in our team. Patricia is very motivated, fast learner with great work ethics and big dreams. Her humor and empathy fostered a comforting work environment. I have no doubt that Patricia will continue to excel in her future endeavors and highly recommend her to any potential employer.',
     giver: 'Stefan Halas',
     link: 'https://www.linkedin.com/in/%C5%A1tefan-halas-115b7658/',
-    title: 'EMEA Manager Global Technical Sevrices @ ADP',
+    title: 'EMEA Manager Global Technical Services @ ADP',
   },
 ];
 

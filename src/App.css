@@ -175,7 +175,7 @@ button:hover {
 } */
 
 .arrow-down {
-  height: 100px;
+  height: 90px;
 }
 
 .arrow-down:hover {
@@ -202,19 +202,28 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 15vw;
+  gap: 20px;
 }
 
 .skill-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: left;
   border: 2px solid rgba(167, 167, 167, 0.637);
   padding: 20px;
   height: 190px;
-  width: 190px;
+  width: 260px;
+}
+
+.skills-title {
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 84, 21);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+  font-size: 1.25em;
+  margin-bottom: 10px;
 }
 
 .skills-list li {
