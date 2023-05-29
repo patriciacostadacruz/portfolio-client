@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { projects, experiences, references } from '../data';
 import myPic from '../images/pro-selfie.jpg';
-import downArrow from '../images/arrow-down.png';
 import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
 import arrowDown from '../images/arrow-down-exp.png';
@@ -10,6 +9,8 @@ import arrowUp from '../images/arrow-up-exp.png';
 import emailjs from 'emailjs-com';
 import linkedIn from '../images/linkedin.png';
 import gitHub from '../images/github.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -176,7 +177,7 @@ export default function MainPage() {
         offset={-100}
         duration={1000}
       >
-        <img className="arrow-down" src={downArrow} alt="Down arrow" />
+        <FontAwesomeIcon className='arrow-down' icon={faArrowDownLong}/>
       </Link>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
