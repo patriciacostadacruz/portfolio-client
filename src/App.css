@@ -1,7 +1,10 @@
 /****** GLOBAL & BACKGROUND ******/
 
+:root {
+  --dark-grey-blue: #1b1b22;
+}
+
 * {
-  color: white;
   margin: 0;
   text-decoration: none;
   list-style-type: none;
@@ -17,10 +20,11 @@
 body {
   margin: auto;
   overflow: auto;
-  background-color: #1b1b22;
+  background-color: rgb(255, 255, 255);
   animation: gradient 20s ease infinite;
   background-size: 400% 400%;
   background-attachment: scroll;
+  color: var(--dark-grey-blue);
 }
 
 @keyframes gradient {
@@ -98,7 +102,7 @@ button:hover {
 /****** NAVBAR ******/
 
 .navbar-container {
-  background-color: #1b1b22ad;
+  background-color: var(--dark-grey-blue);
   backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
@@ -120,6 +124,7 @@ button:hover {
 .navbar-items,
 .navbar-button {
   letter-spacing: 2px;
+  color: white;
 }
 
 .navbar-button:hover,
