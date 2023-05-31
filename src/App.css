@@ -109,7 +109,6 @@ button:hover {
   top: 0;
   right: 0;
   width: 100%;
-  height: 50px;
   padding: 20px;
   z-index: 1;
 }
@@ -273,6 +272,11 @@ button:hover {
   width: 700px;
   position: relative;
   padding: 10px 0;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-buttons {
