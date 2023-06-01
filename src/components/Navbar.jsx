@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { toast } from 'react-hot-toast';
 import laptop from '../images/laptop.png';
 
 export default function Navbar() {
@@ -11,10 +12,16 @@ export default function Navbar() {
     });
   };
 
+  const handleClick = () => {
+    toast('Nothing to see here... Keep scrolling!', {
+      icon: '👋',
+    });
+  };
+
   return (
     <div className="navbar-container">
       <ul className="navbar-items">
-        <img src={laptop} alt="Laptop icon" />
+        <img src={laptop} alt="Laptop icon" onClick={handleClick}/>
         <li>
           <button className="navbar-button" onClick={handleScrollToTop}>
             // home

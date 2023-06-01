@@ -144,6 +144,10 @@ button:hover {
   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
+.navbar-items img:hover {
+  cursor: pointer;
+}
+
 @keyframes floating {
   0% {
     transform: translateY(0);

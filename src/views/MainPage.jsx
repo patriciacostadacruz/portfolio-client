@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import { toast } from 'react-hot-toast';
 import { projects, experiences, references } from '../data';
 import myPic from '../images/pro-selfie.jpg';
 import arrowLeft from '../images/arrow-left.png';
@@ -65,12 +66,12 @@ export default function MainPage() {
   e.preventDefault();
   const { name, email, message } = formData;
   if (!name || !message) {
-    console.log("Name and message are required.");
+    toast.error("Name and message are required.");
     return;
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    console.log("Invalid email address.");
+    toast.error("Invalid email address.");
     return;
   }
   try {
@@ -80,14 +81,14 @@ export default function MainPage() {
       e.target,
       '1-bfXLBdlmKTvIDHx'
     );
-    console.log('Email sent successfully!');
+    toast.success('Email sent successfully!');
     setFormData({
       name: '',
       email: '',
       message: '',
     });
   } catch (error) {
-    console.error('Error sending email:', error);
+    toast.error('Error sending email:', error);
   }
 };
 
