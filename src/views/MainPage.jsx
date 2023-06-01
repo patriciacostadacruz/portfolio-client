@@ -62,24 +62,35 @@ export default function MainPage() {
   };
 
   const sendEmail = async (e) => {
-    e.preventDefault();
-    try {
-      await emailjs.sendForm(
-        'service_v1x2fom',
-        'template_x43vcff',
-        e.target,
-        '1-bfXLBdlmKTvIDHx'
-      );
-      console.log('Email sent successfully!');
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
-  };
+  e.preventDefault();
+  const { name, email, message } = formData;
+  if (!name || !message) {
+    console.log("Name and message are required.");
+    return;
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    console.log("Invalid email address.");
+    return;
+  }
+  try {
+    await emailjs.sendForm(
+      'service_v1x2fom',
+      'template_x43vcff',
+      e.target,
+      '1-bfXLBdlmKTvIDHx'
+    );
+    console.log('Email sent successfully!');
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
+};
+
 
   const toggleExperience = (index) => {
     if (showExperience === index) {
