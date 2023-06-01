@@ -194,25 +194,9 @@ a {
   box-shadow: 0 0 40px var(--dark-grey-blue);
 }
 
-/* .my-avatar:hover {
-  animation: rotate 1s linear;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-} */
-
 .arrow-down {
   height: 60px;
-  color: #1b1b22d0;
+  color: var(--dark-grey-blue);
 }
 
 .arrow-down:hover {
@@ -251,20 +235,28 @@ a {
   background-color: var(--orange-light);
   border-radius: 5px;
   padding: 20px;
-  height: 190px;
+  height: 300px;
   width: 260px;
 }
 
+.skill-container img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
 .skills-title {
-  /* text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 3px; */
   font-size: 1.25em;
   margin-bottom: 10px;
 }
 
 .skills-list li {
   list-style-type: circle;
+}
+
+hr {
+  width: 80%;
+  border: 2px solid var(--grey-light);
+  margin-bottom: 10px;
 }
 
 /****** PROJECTS ******/

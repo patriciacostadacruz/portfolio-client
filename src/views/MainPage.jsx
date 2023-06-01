@@ -6,8 +6,10 @@ import images from '../images';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faAnglesDown,
   faArrowDownLong,
   faArrowUpRightFromSquare,
+  faDownLong,
   faEnvelope,
   faIdBadge,
   faQuoteLeft,
@@ -198,13 +200,15 @@ export default function MainPage() {
         offset={-100}
         duration={1000}
       >
-        <FontAwesomeIcon className="arrow-down" icon={faArrowDownLong} />
+        <FontAwesomeIcon className="arrow-down" icon={faAnglesDown} />
       </Link>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
         <div className="skills-container">
           <section className="skill-container">
+            <img src={images.frontend} alt="" />
             <h4 className="skills-title">Front end development</h4>
+            <hr />
             <ul className="skills-list">
               <li>HTML</li>
               <li>CSS</li>
@@ -214,7 +218,9 @@ export default function MainPage() {
             </ul>
           </section>
           <section className="skill-container">
+            <img src={images.backend} alt="" />
             <h4 className="skills-title">Back end development</h4>
+            <hr />
             <ul className="skills-list">
               <li>JavaScript</li>
               <li>Express</li>
@@ -223,7 +229,9 @@ export default function MainPage() {
             </ul>
           </section>
           <section className="skill-container">
+            <img src={images.tools} alt="" />
             <h4 className="skills-title">Tools & softwares</h4>
+            <hr />
             <ul className="skills-list">
               <li>MongoDB</li>
               <li>Postman</li>
@@ -316,8 +324,8 @@ export default function MainPage() {
       <div id="contact" className="portfolio-contact-section">
         <div className="contact-section">
           <h3 className="contact-sentance">
-            Have an exciting project you need help with? Looking for a motivated
-            and organized, fast learner web developer?
+            Have an exciting project you need help with? Looking for a
+            motivated, resourceful and organized web developer?
           </h3>
           <div className="contact-methods">
             <a
