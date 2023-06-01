@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import { projects, experiences, references } from '../data';
-import myPic from '../images/pro-selfie.jpg';
-import arrowLeft from '../images/arrow-left.png';
-import arrowRight from '../images/arrow-right.png';
-import arrowDown from '../images/arrow-down-exp.png';
-import arrowUp from '../images/arrow-up-exp.png';
+import images from '../images';
 import emailjs from 'emailjs-com';
-import linkedIn from '../images/linkedin.png';
-import gitHub from '../images/github.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowDownLong,
+  faArrowUpRightFromSquare,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default function MainPage() {
   // starts displaying first image of each project
@@ -63,35 +62,34 @@ export default function MainPage() {
   };
 
   const sendEmail = async (e) => {
-  e.preventDefault();
-  const { name, email, message } = formData;
-  if (!name || !message) {
-    toast.error("Name and message are required.");
-    return;
-  }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    toast.error("Invalid email address.");
-    return;
-  }
-  try {
-    await emailjs.sendForm(
-      'service_v1x2fom',
-      'template_x43vcff',
-      e.target,
-      '1-bfXLBdlmKTvIDHx'
-    );
-    toast.success('Email sent successfully!');
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-  } catch (error) {
-    toast.error('Error sending email:', error);
-  }
-};
-
+    e.preventDefault();
+    const { name, email, message } = formData;
+    if (!name || !message) {
+      toast.error('Name and message are required.');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Invalid email address.');
+      return;
+    }
+    try {
+      await emailjs.sendForm(
+        'service_v1x2fom',
+        'template_x43vcff',
+        e.target,
+        '1-bfXLBdlmKTvIDHx'
+      );
+      toast.success('Email sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      toast.error('Error sending email:', error);
+    }
+  };
 
   const toggleExperience = (index) => {
     if (showExperience === index) {
@@ -111,9 +109,9 @@ export default function MainPage() {
           <h4 className="experience-title">{experience.title}</h4>
           <p className="experience-dates">{experience.dates}</p>
           {showExperience === index ? (
-            <img className="arrow" src={arrowUp} alt="Arrow up" />
+            <img className="arrow" src={images.arrowUp} alt="Arrow up" />
           ) : (
-            <img className="arrow" src={arrowDown} alt="Arrow down" />
+            <img className="arrow" src={images.arrowDown} alt="Arrow down" />
           )}
         </div>
         {showExperience === index && (
@@ -174,7 +172,7 @@ export default function MainPage() {
         <div className="wave"></div>
       </div>
       <div id="home" className="portfolio-home-section">
-        <img className="my-avatar" src={myPic} alt="My avatar" />
+        <img className="my-avatar" src={images.myPic} alt="My avatar" />
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
           Software engineer, front & back end web apps developer.
@@ -189,7 +187,7 @@ export default function MainPage() {
         offset={-100}
         duration={1000}
       >
-        <FontAwesomeIcon className='arrow-down' icon={faArrowDownLong}/>
+        <FontAwesomeIcon className="arrow-down" icon={faArrowDownLong} />
       </Link>
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">My expertise</h3>
@@ -246,7 +244,7 @@ export default function MainPage() {
                         disabled={currentSlides[index] === 0}
                       >
                         <img
-                          src={arrowLeft}
+                          src={images.arrowLeft}
                           alt="Arrow left"
                           className="arrow-left"
                         />
@@ -259,7 +257,7 @@ export default function MainPage() {
                         }
                       >
                         <img
-                          src={arrowRight}
+                          src={images.arrowRight}
                           alt="Arrow right"
                           className="arrow-right"
                         />
@@ -287,7 +285,8 @@ export default function MainPage() {
                       rel="noopener noreferrer"
                       className="project-link"
                     >
-                      See project
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> See
+                      project
                     </a>
                   </div>
                 </div>
@@ -311,7 +310,7 @@ export default function MainPage() {
         <h4>Feel free to reach out!</h4>
         <div className="contact-methods">
           <div className="contact-line">
-            <img src={linkedIn} alt="LinkedIn" />
+            <FontAwesomeIcon icon={faLinkedinIn} />
             <a
               href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
               target="_blank"
@@ -321,7 +320,7 @@ export default function MainPage() {
             </a>
           </div>
           <div className="contact-line">
-            <img src={gitHub} alt="GitHub" />
+            <FontAwesomeIcon icon={faGithub} />
             <a
               href="https://github.com/patriciacostadacruz"
               target="_blank"
@@ -359,7 +358,10 @@ export default function MainPage() {
                   onChange={handleChange}
                 ></textarea>
               </label>
-              <button type="submit">Send email</button>
+              <button type="submit">
+                {' '}
+                <FontAwesomeIcon icon={faEnvelope} /> Send email
+              </button>
             </form>
           </div>
         </div>

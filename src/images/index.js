@@ -10,6 +10,11 @@ import investmate2 from './investmate2.png';
 import investmate3 from './investmate3.png';
 import ADPlogo from './adp-logo.png';
 import interrogationPoint from './interrogation-point.png';
+import myPic from '../images/pro-selfie.jpg';
+import arrowLeft from '../images/arrow-left.png';
+import arrowRight from '../images/arrow-right.png';
+import arrowDown from '../images/arrow-down-exp.png';
+import arrowUp from '../images/arrow-up-exp.png';
 
 const images = {
   food1,
@@ -23,6 +28,11 @@ const images = {
   investmate3,
   ADPlogo,
   interrogationPoint,
+  myPic,
+  arrowLeft,
+  arrowRight,
+  arrowDown,
+  arrowUp,
 };
 
 export default images;
