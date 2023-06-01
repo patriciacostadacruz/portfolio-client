@@ -152,14 +152,12 @@ export default function MainPage() {
     return references.map((reference, index) => (
       <div className="reference-container" key={index}>
         <p>{reference.content}</p>
-        {reference.link ? (
+        <div>
           <a href={reference.link} target="_blank" rel="noopener noreferrer">
             {reference.giver}
           </a>
-        ) : (
-          <span>{reference.giver}</span>
-        )}
-        <p>{reference.title}</p>
+          <p>{reference.title}</p>
+        </div>
       </div>
     ));
   };
@@ -303,32 +301,29 @@ export default function MainPage() {
         <div className="references-container">{renderReferences()}</div>
       </div>
       <div id="contact" className="portfolio-contact-section">
-        <h3 className="contact-sentance">
-          Have an exciting project you need help with? Looking for a motivated
-          and organized, fast learner web developer?
-        </h3>
-        <h4>Feel free to reach out!</h4>
-        <div className="contact-methods">
-          <div className="contact-line">
-            <FontAwesomeIcon icon={faLinkedinIn} />
+        <div className="contact-section">
+          <h3 className="contact-sentance">
+            Have an exciting project you need help with? Looking for a motivated
+            and organized, fast learner web developer?
+          </h3>
+          <div className="contact-methods">
             <a
               href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
             </a>
-          </div>
-          <div className="contact-line">
-            <FontAwesomeIcon icon={faGithub} />
             <a
               href="https://github.com/patriciacostadacruz"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
           </div>
+        </div>
+        <div className="contact-section">
           <div className="contact-form">
             <h4>Send me an email, I'll answer as soon as I can!</h4>
             <form onSubmit={sendEmail}>

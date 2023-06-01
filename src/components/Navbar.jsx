@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <ul className="navbar-items">
-        <img src={laptop} alt="Laptop icon" onClick={handleClick}/>
+        <img src={laptop} alt="Laptop icon" onClick={handleClick} />
         <li>
           <button className="navbar-button" onClick={handleScrollToTop}>
             // home

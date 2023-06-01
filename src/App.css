@@ -2,7 +2,9 @@
 
 :root {
   --dark-grey-blue: #1b1b22;
+  --grey-light: #474747;
   --orange: rgb(255, 84, 21);
+  --orange-light: rgb(251, 203, 189);
 }
 
 * {
@@ -100,6 +102,11 @@ button:hover {
   cursor: pointer;
 }
 
+a {
+  color: var(--dark-grey-blue);
+  font-weight: bold;
+}
+
 /****** NAVBAR ******/
 
 .navbar-container {
@@ -122,9 +129,11 @@ button:hover {
 }
 
 .navbar-items,
-.navbar-button {
+.navbar-button,
+.navbar-options {
   letter-spacing: 2px;
   color: white;
+  font-weight: normal;
 }
 
 .navbar-button:hover,
@@ -182,7 +191,7 @@ button:hover {
   height: 350px;
   width: 350px;
   object-fit: cover;
-  box-shadow: 0 0 40px var(--dark-grey-blue)
+  box-shadow: 0 0 40px var(--dark-grey-blue);
 }
 
 /* .my-avatar:hover {
@@ -239,7 +248,7 @@ button:hover {
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  background-color: rgba(255, 83, 21, 0.301);
+  background-color: var(--orange-light);
   border-radius: 5px;
   padding: 20px;
   height: 190px;
@@ -298,7 +307,7 @@ button:hover {
 }
 
 .project-title {
-  font-size: 1.40em;
+  font-size: 1.5em;
 }
 
 .project-data-container {
@@ -308,6 +317,10 @@ button:hover {
   align-items: center;
   gap: 10px;
   padding: 0 30px;
+}
+
+.project-description {
+  width: 90%;
 }
 
 .project-link {
@@ -350,7 +363,7 @@ button:hover {
 }
 
 .experience-detail {
-  background-color: rgba(255, 83, 21, 0.301);
+  background-color: var(--orange-light);
   border-radius: 5px;
   width: 50%;
   margin-bottom: 20px;
@@ -399,7 +412,34 @@ button:hover {
   align-items: center;
 }
 
+.reference-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 35%;
+  margin: auto;
+  background-color: var(--grey-light);
+  color: white;
+  padding: 20px;
+  border-radius: 60px;
+}
+
+.reference-container div p {
+  font-style: italic;
+}
+
+.reference-container a {
+  color: white;
+}
+
 /****** CONTACT ******/
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .contact-methods {
   display: flex;
@@ -413,15 +453,9 @@ button:hover {
   height: 30px;
 }
 
-.contact-line {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-
 .contact-sentance {
   margin: 50px 15%;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -432,11 +466,6 @@ button:hover {
   margin-bottom: 50px;
   padding: 20px;
   width: 30%;
-}
-
-.portfolio-contact-section h4 {
-  font-size: 1.25em;
-  margin-bottom: 20px;
 }
 
 .contact-form h4 {
