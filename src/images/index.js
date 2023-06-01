@@ -15,6 +15,9 @@ import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
 import arrowDown from '../images/arrow-down-exp.png';
 import arrowUp from '../images/arrow-up-exp.png';
+import frontend from '../images/frontend.png';
+import backend from '../images/backend.png';
+import tools from '../images/tools.png';
 
 const images = {
   food1,
@@ -33,6 +36,9 @@ const images = {
   arrowRight,
   arrowDown,
   arrowUp,
+  frontend,
+  backend,
+  tools,
 };
 
 export default images;
