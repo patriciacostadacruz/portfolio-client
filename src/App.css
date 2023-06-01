@@ -399,34 +399,44 @@ hr {
 .references-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  gap: 30px;
+  height: 400px;
+  width: auto;
+  margin: 0 40px 40px 40px;
 }
 
 .reference-container {
+  background-color: var(--grey-light);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 30%;
-  margin: auto;
-  background-color: var(--grey-light);
-  color: white;
-  padding: 20px;
-  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
-.reference-container div p {
-  font-style: italic;
+.reference-container p {
+  margin-bottom: 10px;
+  color: white;
 }
 
 .reference-container a {
-  color: white;
+  display: flex;
+  align-items: center;
+  color: var(--orange);
+  margin-bottom: 5px;
 }
 
-.quote {
-  font-size: 1.5em;
+.reference-container a:hover {
+  text-decoration: underline;
+}
+
+.reference-container .quote {
+  margin-right: 5px;
+  font-size: 18px;
 }
 
 /****** CONTACT ******/

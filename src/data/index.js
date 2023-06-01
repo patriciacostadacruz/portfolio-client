@@ -72,17 +72,17 @@ const experiences = [
 const references = [
   {
     content:
-      'Patricia is a self starter and go getter. She’s got a good attitude and is well liked by her teammates. I admire her passion for development and know she will make a positive impact wherever she goes.',
-    giver: 'Gregory Alexander',
-    link: 'https://www.linkedin.com/in/gregory-alexander-b7970025/',
-    title: 'AMS Sr Manager Global Technical Services @ ADP',
-  },
-  {
-    content:
       'From the first day, it was clear that Patri was not just one more student. She is a bright person and has worked hard, and has helped create a great environment with her classmates, always helping anyone in need. Ambitious and perfectionist, Patri has the best mindset for the programming world. I am sure the future holds incredible things for you, Patri!!',
     giver: 'Alejandra Bausá Carmona',
     link: 'https://www.linkedin.com/in/ale-bausa/',
     title: 'Full stack web developer and teacher @ Freelance & IronHack',
+  },
+  {
+    content:
+      'Patricia is a self starter and go getter. She’s got a good attitude and is well liked by her teammates. I admire her passion for development and know she will make a positive impact wherever she goes.',
+    giver: 'Gregory Alexander',
+    link: 'https://www.linkedin.com/in/gregory-alexander-b7970025/',
+    title: 'AMS Sr Manager Global Technical Services @ ADP',
   },
   {
     content:

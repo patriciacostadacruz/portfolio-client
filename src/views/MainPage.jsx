@@ -166,12 +166,10 @@ export default function MainPage() {
             {reference.content}{' '}
             <FontAwesomeIcon icon={faQuoteRight} className="quote" />
           </p>
-          <div>
-            <a href={reference.link} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faIdBadge} /> {reference.giver}
-            </a>
-            <p>{reference.title}</p>
-          </div>
+          <a href={reference.link} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faIdBadge} /> {reference.giver}
+          </a>
+          <p>{reference.title}</p>
         </div>
       );
     });
@@ -203,7 +201,7 @@ export default function MainPage() {
         <FontAwesomeIcon className="arrow-down" icon={faAnglesDown} />
       </Link>
       <div id="expertise" className="portfolio-expertise-section">
-        <h3 className="section-name">My expertise</h3>
+        <h3 className="section-name">&lt; Expertise /&gt;</h3>
         <div className="skills-container">
           <section className="skill-container">
             <img src={images.frontend} alt="" />
@@ -244,7 +242,7 @@ export default function MainPage() {
         </div>
       </div>
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">My projects</h3>
+        <h3 className="section-name">&lt; Projects /&gt;</h3>
         {/* add dynamic image */}
         <div className="projects-container">
           {projects.length > 0 &&
@@ -314,11 +312,11 @@ export default function MainPage() {
         </div>
       </div>
       <div id="experience" className="portfolio-experience-section">
-        <h3 className="section-name">My experience</h3>
+        <h3 className="section-name">&lt; Experience /&gt;</h3>
         <div className="experiences-container">{renderExperiences()}</div>
       </div>
       <div id="references" className="portfolio-references-section">
-        <h3 className="section-name">My references</h3>
+        <h3 className="section-name">&lt; References /&gt;</h3>
         <div className="references-container">{renderReferences()}</div>
       </div>
       <div id="contact" className="portfolio-contact-section">
