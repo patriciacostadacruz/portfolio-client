@@ -345,8 +345,6 @@ export default function MainPage() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={5}
-                  cols={50}
                 ></textarea>
               </label>
               <button type="submit">Send email</button>
