@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import { projects, experiences, references } from '../data';
@@ -9,6 +9,9 @@ import {
   faArrowDownLong,
   faArrowUpRightFromSquare,
   faEnvelope,
+  faIdBadge,
+  faQuoteLeft,
+  faQuoteRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
@@ -22,6 +25,7 @@ export default function MainPage() {
     message: '',
   });
 
+  // handles showing previous project image
   const handlePreviousSlide = (index) => {
     setCurrentSlides((prevSlides) =>
       prevSlides.map((prevSlide, i) =>
@@ -30,6 +34,7 @@ export default function MainPage() {
     );
   };
 
+  // handles showing next project image
   const handleNextSlide = (index) => {
     setCurrentSlides((prevSlides) =>
       prevSlides.map((prevSlide, i) =>
@@ -40,6 +45,7 @@ export default function MainPage() {
     );
   };
 
+  // renders project images
   const renderSlides = (slides, index) => {
     const currentImage = slides[currentSlides[index]];
     return (
@@ -53,6 +59,7 @@ export default function MainPage() {
     );
   };
 
+  // handles changes in email form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -149,17 +156,23 @@ export default function MainPage() {
   };
 
   const renderReferences = () => {
-    return references.map((reference, index) => (
-      <div className="reference-container" key={index}>
-        <p>{reference.content}</p>
-        <div>
-          <a href={reference.link} target="_blank" rel="noopener noreferrer">
-            {reference.giver}
-          </a>
-          <p>{reference.title}</p>
+    return references.map((reference, index) => {
+      return (
+        <div key={index} className="reference-container">
+          <p>
+            <FontAwesomeIcon icon={faQuoteLeft} className="quote" />{' '}
+            {reference.content}{' '}
+            <FontAwesomeIcon icon={faQuoteRight} className="quote" />
+          </p>
+          <div>
+            <a href={reference.link} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faIdBadge} /> {reference.giver}
+            </a>
+            <p>{reference.title}</p>
+          </div>
         </div>
-      </div>
-    ));
+      );
+    });
   };
 
   return (

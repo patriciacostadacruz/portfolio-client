@@ -433,6 +433,10 @@ a {
   color: white;
 }
 
+.quote {
+  font-size: 1.5em;
+}
+
 /****** CONTACT ******/
 
 .contact-section {
