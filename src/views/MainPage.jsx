@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import { projects, experiences, references } from '../data';
 import images from '../images';
+import myCurriculum from '../files/pcc-cv.pdf';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAnglesDown,
-  faArrowDownLong,
   faArrowUpRightFromSquare,
-  faDownLong,
+  faDownload,
   faEnvelope,
-  faIdBadge,
   faQuoteLeft,
   faQuoteRight,
 } from '@fortawesome/free-solid-svg-icons';
@@ -167,7 +166,7 @@ export default function MainPage() {
             <FontAwesomeIcon icon={faQuoteRight} className="quote" />
           </p>
           <a href={reference.link} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faIdBadge} /> {reference.giver}
+            {reference.giver}
           </a>
           <p>{reference.title}</p>
         </div>
@@ -211,7 +210,7 @@ export default function MainPage() {
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
-              <li>React</li>
+              <li>ReactJS</li>
               <li>Firebase</li>
             </ul>
           </section>
@@ -221,8 +220,8 @@ export default function MainPage() {
             <hr />
             <ul className="skills-list">
               <li>JavaScript</li>
-              <li>Express</li>
-              <li>Node</li>
+              <li>Express.js</li>
+              <li>Node.js</li>
               <li>Firebase</li>
             </ul>
           </section>
@@ -321,10 +320,7 @@ export default function MainPage() {
       </div>
       <div id="contact" className="portfolio-contact-section">
         <div className="contact-section">
-          <h3 className="contact-sentance">
-            Have an exciting project you need help with? Looking for a
-            motivated, resourceful and organized web developer?
-          </h3>
+          <h3 className="contact-sentance">Feel free to reach out!</h3>
           <div className="contact-methods">
             <a
               href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
@@ -340,11 +336,14 @@ export default function MainPage() {
             >
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
+            <a href={myCurriculum} download="patricia-costa-da-cruz_CV">
+              <FontAwesomeIcon icon={faDownload} /> Download my CV{' '}
+            </a>
           </div>
         </div>
         <div className="contact-section">
           <div className="contact-form">
-            <h4>Send me an email, I'll answer as soon as I can!</h4>
+            <h4>You can also email me here:</h4>
             <form onSubmit={sendEmail}>
               <label>
                 Your name

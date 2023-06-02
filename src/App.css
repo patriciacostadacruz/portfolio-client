@@ -197,9 +197,6 @@ a {
 .arrow-down {
   height: 60px;
   color: var(--dark-grey-blue);
-}
-
-.arrow-down:hover {
   animation: pulse 1s infinite;
 }
 
@@ -454,6 +451,7 @@ hr {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .contact-methods img {
@@ -472,7 +470,7 @@ hr {
   border-radius: 5px;
   margin-bottom: 50px;
   padding: 20px;
-  width: 30%;
+  width: 25%;
 }
 
 .contact-form h4 {
@@ -484,7 +482,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 20px;
   gap: 30px;
 }
 
@@ -493,6 +491,9 @@ textarea {
   color: rgb(99, 99, 99);
   border-radius: 5px;
   border: none;
+}
+textarea {
+  height: 150px;
 }
 
 label {
