@@ -17,48 +17,12 @@ import {
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default function MainPage() {
-  // starts displaying first image of each project
-  const [currentSlides, setCurrentSlides] = useState(projects.map(() => 0));
   const [showExperience, setShowExperience] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-
-  // handles showing previous project image
-  const handlePreviousSlide = (index) => {
-    setCurrentSlides((prevSlides) =>
-      prevSlides.map((prevSlide, i) =>
-        i === index && prevSlide > 0 ? prevSlide - 1 : prevSlide
-      )
-    );
-  };
-
-  // handles showing next project image
-  const handleNextSlide = (index) => {
-    setCurrentSlides((prevSlides) =>
-      prevSlides.map((prevSlide, i) =>
-        i === index && prevSlide < projects[i].slides.length - 1
-          ? prevSlide + 1
-          : prevSlide
-      )
-    );
-  };
-
-  // renders project images
-  const renderSlides = (slides, index) => {
-    const currentImage = slides[currentSlides[index]];
-    return (
-      <img
-        key={currentSlides[index]}
-        src={currentImage}
-        alt={`Slide ${currentSlides[index] + 1}`}
-        style={{ height: '300px', borderRadius: '25px' }}
-        className="active-slide"
-      />
-    );
-  };
 
   // handles changes in email form
   const handleChange = (e) => {
@@ -248,41 +212,10 @@ export default function MainPage() {
             projects.map((project, index) => {
               return (
                 <div key={index} className="project-container">
-                  <div className="slideshow-container">
-                    {project.slides.length > 0 &&
-                      renderSlides(project.slides, index)}
-                  </div>
-                  {project.slides.length > 0 && (
-                    <div className="slide-buttons">
-                      <button
-                        className="previous-slide-btn"
-                        onClick={() => handlePreviousSlide(index)}
-                        disabled={currentSlides[index] === 0}
-                      >
-                        <img
-                          src={images.arrowLeft}
-                          alt="Arrow left"
-                          className="arrow-left"
-                        />
-                      </button>
-                      <button
-                        className="next-slide-btn"
-                        onClick={() => handleNextSlide(index)}
-                        disabled={
-                          currentSlides[index] === project.slides.length - 1
-                        }
-                      >
-                        <img
-                          src={images.arrowRight}
-                          alt="Arrow right"
-                          className="arrow-right"
-                        />
-                      </button>
-                    </div>
-                  )}
+                  <img src={project.image} alt="" />
                   <div className="project-data-container">
                     <h4 className="project-title">{project.title}</h4>
-                    <p className="project-description">{project.description}</p>
+                    <p>{project.description}</p>
                     {project.frontEndTechStack && (
                       <p>
                         <strong>Front end stack:</strong>{' '}

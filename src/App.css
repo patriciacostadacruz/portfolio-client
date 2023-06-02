@@ -47,7 +47,7 @@ body {
   border-radius: 1000% 1000% 0 0;
   position: fixed;
   width: 200%;
-  height: 15em;
+  height: 10em;
   animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
@@ -205,7 +205,7 @@ a {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.25);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
@@ -247,7 +247,7 @@ a {
 }
 
 .skills-list li {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 hr {
@@ -262,8 +262,9 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -271,44 +272,27 @@ hr {
   background-color: var(--dark-grey-blue);
   color: white;
   border-radius: 10px;
-  width: 700px;
-  position: relative;
-  padding: 10px 0;
-  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.slide-buttons {
-  position: absolute;
-  top: 30%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.slide-buttons img {
-  height: 60px;
+  width: 400px;
 }
 
 .project-title {
   font-size: 1.5em;
 }
 
+.project-container img {
+  height: 400px;
+}
+
 .project-data-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10px;
-  padding: 0 30px;
-}
-
-.project-description {
+  padding: 30px;
   width: 90%;
 }
 
