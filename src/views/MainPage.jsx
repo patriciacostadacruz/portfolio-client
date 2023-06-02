@@ -160,7 +160,7 @@ export default function MainPage() {
     return references.map((reference, index) => {
       return (
         <div key={index} className="reference-container">
-          <p>
+          <p className="reference-content">
             <FontAwesomeIcon icon={faQuoteLeft} className="quote" />{' '}
             {reference.content}{' '}
             <FontAwesomeIcon icon={faQuoteRight} className="quote" />
@@ -168,7 +168,7 @@ export default function MainPage() {
           <a href={reference.link} target="_blank" rel="noopener noreferrer">
             {reference.giver}
           </a>
-          <p>{reference.title}</p>
+          <p className="reference-title">{reference.title}</p>
         </div>
       );
     });

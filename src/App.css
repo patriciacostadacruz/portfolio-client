@@ -400,11 +400,13 @@ hr {
   gap: 30px;
   height: 400px;
   width: auto;
-  margin: 0 40px 40px 40px;
+  margin: 0 50px 50px 50px;
 }
 
 .reference-container {
-  background-color: var(--grey-light);
+  background-color: white;
+  color: var(--dark-grey-blue);
+  box-shadow: 0 0 30px var(--dark-grey-blue);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -412,23 +414,29 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
 }
 
 .reference-container p {
   margin-bottom: 10px;
-  color: white;
+}
+
+.reference-content {
+  font-style: italic;
 }
 
 .reference-container a {
   display: flex;
   align-items: center;
   color: var(--orange);
-  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .reference-container a:hover {
   text-decoration: underline;
+}
+
+.reference-title {
+  font-size: 14px;
 }
 
 .reference-container .quote {
