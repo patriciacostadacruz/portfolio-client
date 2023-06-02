@@ -197,7 +197,7 @@ a {
 .arrow-down {
   height: 60px;
   color: var(--dark-grey-blue);
-  animation: pulse 1s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -238,7 +238,7 @@ a {
 }
 
 .skill-container:hover {
-  animation: bigger 2s;
+  animation: bigger 4s;
 }
 
 .skill-container:hover ~ .skill-container {
@@ -249,8 +249,11 @@ a {
   0% {
     transform: scale(1);
   }
-  100% {
+  50% {
     transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -360,7 +363,6 @@ hr {
   justify-content: center;
   align-items: center;
 }
-
 .experience-data h5 {
   text-decoration: underline;
   font-size: 1.1em;
