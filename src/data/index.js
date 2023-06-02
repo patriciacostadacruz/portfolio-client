@@ -2,14 +2,6 @@ import images from '../images';
 
 const projects = [
   {
-    title: "Hubble's quest",
-    description:
-      'After Hubble telescope was launched, alien populations have started being attacked by some alien monster. As part of the Independent Wizards Mission (IWM), you are charged with one mission: go to planet BetaX-2 and kill the enemies to allow friendly and nice aliens to live in peace.',
-    frontEndTechStack: 'HTML - CSS - JavaScript',
-    image: images.hubble,
-    link: 'https://patriciacostadacruz.github.io/Hubble-s-quest/',
-  },
-  {
     title: 'Food-Folio',
     description:
       'Food-Folio is a recipes app which allows users to see a wide variety of recipes and cooking steps, but also allows them to add their own recipes and save their favorites for quick access.',
@@ -17,6 +9,14 @@ const projects = [
     backEndTechStack: 'Node.js - Express.js - MongoDB',
     image: images.foodfolio,
     link: 'https://food-folio-app.fly.dev/',
+  },
+  {
+    title: "Hubble's quest",
+    description:
+      'After Hubble telescope was launched, alien populations have started being attacked by some alien monster. As part of the Independent Wizards Mission (IWM), you are charged with one mission: go to planet BetaX-2 and kill the enemies to allow friendly and nice aliens to live in peace.',
+    frontEndTechStack: 'HTML - CSS - JavaScript',
+    image: images.hubble,
+    link: 'https://patriciacostadacruz.github.io/Hubble-s-quest/',
   },
   {
     title: 'investMate',

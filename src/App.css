@@ -220,7 +220,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .skill-container {
@@ -229,11 +228,30 @@ a {
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  background-color: var(--orange-light);
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
   padding: 20px;
   height: 300px;
   width: 260px;
+  box-shadow: 0 0 30px var(--dark-grey-blue);
+  transition: background-color 0.3s;
+}
+
+.skill-container:hover {
+  animation: bigger 2s;
+}
+
+.skill-container:hover ~ .skill-container {
+  background-color: var(--light-grey);
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 .skill-container img {
@@ -252,7 +270,7 @@ a {
 
 hr {
   width: 80%;
-  border: 2px solid var(--grey-light);
+  border: 2px solid var(--dark-grey-blue);
   margin-bottom: 10px;
 }
 
@@ -292,7 +310,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  padding: 30px;
+  padding: 20px;
   width: 90%;
 }
 
@@ -302,10 +320,6 @@ hr {
   padding: 5px 15px;
   border-radius: 10px;
   font-weight: bold;
-}
-
-.project-link:hover {
-  transform: scale(1.1);
 }
 
 /****** EXPERIENCE ******/
@@ -327,7 +341,7 @@ hr {
   padding: 10px;
   border-radius: 5px;
   width: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .arrow {
