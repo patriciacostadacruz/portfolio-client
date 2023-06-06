@@ -73,7 +73,12 @@ export default function MainPage() {
 
   const renderExperiences = () => {
     return experiences.map((experience, index) => (
-      <div className="experience-container" key={index}>
+      <div
+        className={`experience-container ${
+          showExperience === index ? 'expanded' : ''
+        }`}
+        key={index}
+      >
         <div
           className="experience-header"
           onClick={() => toggleExperience(index)}
@@ -86,36 +91,34 @@ export default function MainPage() {
             <img className="arrow" src={images.arrowDown} alt="Arrow down" />
           )}
         </div>
-        {showExperience === index && (
-          <div className="experience-detail">
-            <section className="experience-data">
-              <p className="experience-description">{experience.description}</p>
-              <h5>Main skills used:</h5>
-              <span className="experience-tags">
-                {experience.tags.map((tag, index) => (
-                  <p className="skill-tag" key={index}>
-                    {tag}
-                  </p>
-                ))}
-              </span>
-            </section>
-            <section className="experience-company">
-              {experience.logo && (
-                <a
-                  href={experience.link ? experience.link : undefined}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={experience.logo}
-                    style={{ height: '50px' }}
-                    alt="Company logo"
-                  />
-                </a>
-              )}
-            </section>
-          </div>
-        )}
+        <div className="experience-detail">
+          <section className="experience-data">
+            <p className="experience-description">{experience.description}</p>
+            <h5>Main skills used:</h5>
+            <span className="experience-tags">
+              {experience.tags.map((tag, index) => (
+                <p className="skill-tag" key={index}>
+                  {tag}
+                </p>
+              ))}
+            </span>
+          </section>
+          <section className="experience-company">
+            {experience.logo && (
+              <a
+                href={experience.link ? experience.link : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={experience.logo}
+                  style={{ height: '50px' }}
+                  alt="Company logo"
+                />
+              </a>
+            )}
+          </section>
+        </div>
       </div>
     ));
   };

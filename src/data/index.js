@@ -41,11 +41,21 @@ const projects = [
 
 const experiences = [
   {
-    title: 'Front-end developer @ CookEatLike',
-    dates: 'May 2023 - present',
+    title: 'Web Developer @ Freelance',
+    dates: 'June 2023 - present',
     description:
-      'Working with two friends on a cooking streaming app side project. I am in charge of creating the front end logic. We have regular meetings to discuss our goals, progress, next steps adn exchange opinions and knowledge.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'JWT'],
+      'Working on a few projects to create innovative and adapted web apps as well as additional elements such as creating automated cronjobs, integrate specific packages in pre-existing apps,...',
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React',
+      'JWT',
+      'ReactJS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+    ],
     logo: `${images.interrogationPoint}`,
     link: '',
   },
