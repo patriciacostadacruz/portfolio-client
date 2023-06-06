@@ -189,6 +189,7 @@ export default function MainPage() {
               <li>JavaScript</li>
               <li>Express.js</li>
               <li>Node.js</li>
+              <li>MongoDB</li>
               <li>Firebase</li>
             </ul>
           </section>
@@ -197,7 +198,6 @@ export default function MainPage() {
             <h4 className="skills-title">Tools & softwares</h4>
             <hr />
             <ul className="skills-list">
-              <li>MongoDB</li>
               <li>Postman</li>
               <li>Jira</li>
               <li>Swagger API</li>
