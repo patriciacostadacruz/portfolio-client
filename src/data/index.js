@@ -33,7 +33,7 @@ const projects = [
   //   description:
   //     'Recipes app created as a training for Firebase apps using its different services such as functions, auth, hosting, storage, etc.',
   //   frontEndTechStack: 'HTML - CSS - JavaScript - ReactJS - Firebase',
-  //   backEndTechStack: 'Node - Express.js - Firebase',
+  //   backEndTechStack: 'NodeJS - Express.js - Firebase',
   //   image: '',
   //   link: 'https://fir-recipes-3f7d9.web.app/',
   // },
@@ -44,7 +44,7 @@ const experiences = [
     title: 'Web Developer @ Freelance',
     dates: 'June 2023 - present',
     description:
-      'Working on a few projects to create innovative and adapted web apps as well as additional elements such as creating automated cronjobs, integrate specific packages in pre-existing apps,...',
+      'Working on diverse projects to create innovative and adapted web apps - as well as additional elements such as creating custom cronjobs, integrate specific packages in pre-existing apps,...',
     tags: [
       'HTML',
       'CSS',

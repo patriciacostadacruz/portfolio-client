@@ -184,10 +184,11 @@ a {
 .my-name,
 .my-presentation {
   text-transform: uppercase;
+  margin: 20px;
 }
 
 .my-avatar {
-  margin: 40px 0 20px 0;
+  margin: 40px 0 40px 0;
   border-radius: 50%;
   height: 350px;
   width: 350px;
@@ -513,4 +514,83 @@ form button {
   padding: 5px 15px;
   border-radius: 10px;
   font-weight: bold;
+}
+
+/***** MEDIA QUERIES FOR SMALLER SCREENS ******/
+
+@media only screen and (max-width: 1090px) {
+  .portfolio-home-section {
+    margin: 0 10px;
+  }
+
+  .my-avatar {
+    margin-top: 70px;
+    height: 250px;
+    width: 250px;
+  }
+
+  .my-name {
+    font-size: 2.5em;
+    margin: 40px 0;
+    line-height: 40px;
+  }
+
+  .arrow-down {
+    height: 40px;
+    margin-top: 150px;
+  }
+
+  .experience-header,
+  .experience-detail {
+    width: 85%;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .section-name {
+    font-size: 2.1em;
+  }
+
+  .skill-container,
+  .project-container,
+  .project-container img,
+  .experience-header,
+  .experience-detail,
+  .reference-container,
+  .references-container,
+  .contact-form {
+    border-radius: 0;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-height: 910px) {
+  .my-name {
+    font-size: 2.7em;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .experience-company {
+    display: none;
+  }
+
+  .experience-tags {
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact-form,
+  .reference-container,
+  .experience-detail,
+  .experience-header {
+    width: 80%;
+  }
 }
