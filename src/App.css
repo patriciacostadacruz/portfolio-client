@@ -554,7 +554,7 @@ form button {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 414px) {
   .section-name {
     font-size: 2.1em;
   }
