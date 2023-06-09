@@ -27,6 +27,7 @@ export default function Navbar() {
       // acceleration until halfway, then deceleration
       smooth: 'true',
     });
+    handleMenuClick();
   };
 
   const handleClick = () => {
@@ -37,6 +38,12 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleMenuClick = () => {
+    if (!isScreenWide) {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -63,6 +70,7 @@ export default function Navbar() {
               smooth={true}
               offset={-100}
               duration={1000}
+              onClick={handleMenuClick}
             >
               // EXPERTISE
             </Link>
@@ -76,6 +84,7 @@ export default function Navbar() {
               smooth={true}
               offset={-100}
               duration={1000}
+              onClick={handleMenuClick}
             >
               // PROJECTS
             </Link>
@@ -89,6 +98,7 @@ export default function Navbar() {
               smooth={true}
               offset={-100}
               duration={1000}
+              onClick={handleMenuClick}
             >
               // WORK EXPERIENCE
             </Link>
@@ -102,6 +112,7 @@ export default function Navbar() {
               smooth={true}
               offset={-100}
               duration={1000}
+              onClick={handleMenuClick}
             >
               // REFERENCES
             </Link>
@@ -115,6 +126,7 @@ export default function Navbar() {
               smooth={true}
               offset={-100}
               duration={1000}
+              onClick={handleMenuClick}
             >
               // CONTACT
             </Link>
