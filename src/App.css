@@ -618,18 +618,21 @@ form button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex;
     height: 20px;
     width: 30px;
     cursor: pointer;
     z-index: 2;
+    position: absolute;
+    right: 20px;
+    top: 10px;
   }
 
   .hamburger-menu span {
     display: block;
     background-color: white;
     height: 2px;
-    width: 100%;
+    width: 30px;
     transition: transform 0.3s ease-in-out;
   }
 
