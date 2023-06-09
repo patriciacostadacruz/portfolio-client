@@ -201,7 +201,7 @@ a {
 }
 
 .arrow-down {
-  height: 50px;
+  height: 80px;
   color: var(--dark-grey-blue);
   animation: pulse 2s infinite;
 }
