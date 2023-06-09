@@ -5,17 +5,21 @@ import { toast } from 'react-hot-toast';
 import laptop from '../images/laptop.png';
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScreenWide, setIsScreenWide] = useState(window.innerWidth > 900);
 
   useEffect(() => {
     const handleResize = () => {
       setIsScreenWide(window.innerWidth > 900);
+      if (!isScreenWide) {
+        setIsMenuOpen(false);
+      }
     };
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleScrollToTop = () => {
