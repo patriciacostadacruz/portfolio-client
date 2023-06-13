@@ -232,10 +232,10 @@ export default function MainPage() {
                       </p>
                     )}
                     <a
+                      className="project-link"
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
                     >
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> See
                       project
@@ -307,7 +307,7 @@ export default function MainPage() {
                   onChange={handleChange}
                 ></textarea>
               </label>
-              <button type="submit">
+              <button type="submit" className="email-button">
                 {' '}
                 <FontAwesomeIcon icon={faEnvelope} /> Send email
               </button>

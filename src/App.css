@@ -107,6 +107,24 @@ a {
   font-weight: bold;
 }
 
+.project-link:hover,
+.error-home-button:hover,
+.email-button:hover {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /****** NAVBAR ******/
 
 .navbar-container {
@@ -204,10 +222,10 @@ a {
   margin-top: 40px;
   height: 50px;
   color: var(--dark-grey-blue);
-  animation: pulse 2s infinite;
+  animation: pulseBis 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulseBis {
   0% {
     transform: scale(1);
   }
@@ -521,6 +539,23 @@ form button {
   font-weight: bold;
 }
 
+/****** ERROR PAGE ******/
+
+.error-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 200px;
+}
+
+.error-section .error-home-button {
+  box-shadow: 0px 0px 10px var(--dark-grey-blue);
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
 /***** MEDIA QUERIES FOR SMALLER SCREENS ******/
 
 @media only screen and (max-width: 1090px) {
@@ -552,6 +587,10 @@ form button {
 
   .contact-form {
     width: 50%;
+  }
+
+  .error-section img {
+    width: 300px;
   }
 }
 
