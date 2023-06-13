@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import laptop from '../images/laptop.png';
@@ -7,6 +7,7 @@ import laptop from '../images/laptop.png';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScreenWide, setIsScreenWide] = useState(window.innerWidth > 900);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,17 +16,29 @@ export default function Navbar() {
         setIsMenuOpen(false);
       }
     };
+
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isScreenWide]);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
   }, []);
 
   const handleScrollToTop = () => {
     scroll.scrollToTop({
-      // acceleration until halfway, then deceleration
-      smooth: 'true',
+      smooth: true,
     });
     handleMenuClick();
   };
@@ -36,7 +49,8 @@ export default function Navbar() {
     });
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (event) => {
+    event.stopPropagation(); // Prevent click event propagation
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -54,7 +68,7 @@ export default function Navbar() {
         <span></span>
       </div>
       {(isMenuOpen || isScreenWide) && (
-        <ul className="navbar-items">
+        <ul className="navbar-items" ref={menuRef}>
           <img src={laptop} alt="Laptop icon" onClick={handleClick} />
           <li>
             <button className="navbar-button" onClick={handleScrollToTop}>
