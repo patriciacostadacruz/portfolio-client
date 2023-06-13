@@ -227,7 +227,7 @@ export default function MainPage() {
                     )}
                     {project.backEndTechStack && (
                       <p>
-                        <strong>Front end stack:</strong>{' '}
+                        <strong>Back end stack:</strong>{' '}
                         {project.backEndTechStack}
                       </p>
                     )}
