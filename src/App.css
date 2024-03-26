@@ -258,7 +258,7 @@ a {
   color: white;
   border-radius: 10px;
   padding: 20px;
-  height: 300px;
+  height: 340px;
   width: 260px;
   box-shadow: 0 0 30px var(--dark-grey-blue);
 }
@@ -311,7 +311,9 @@ hr {
 }
 
 .project-container img {
-  height: 400px;
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
   -moz-border-radius: 0px;
   -webkit-border-radius: 10px 10px 0px 0px;
   border-radius: 10px 10px 0px 0px;

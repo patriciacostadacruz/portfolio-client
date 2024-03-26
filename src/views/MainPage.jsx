@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
-import { projects, experiences, references } from '../data';
+import { projects, personalProjects, experiences, references } from '../data';
 import images from '../images';
 import myCurriculum from '../files/pcc-cv.pdf';
 import emailjs from 'emailjs-com';
@@ -24,7 +24,6 @@ export default function MainPage() {
     message: '',
   });
 
-  // handles changes in email form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -152,8 +151,9 @@ export default function MainPage() {
         <img className="my-avatar" src={images.myPic} alt="My avatar" />
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
         <p className="my-presentation">
-          Software engineer, front & back end web apps developer.
+          Full Stack Developer 📍 Barcelona, Spain
         </p>
+        <p>~ Website undergoing reconstruction...</p>
       </div>
       <Link
         className="navbar-options"
@@ -176,9 +176,11 @@ export default function MainPage() {
             <ul className="skills-list">
               <li>HTML</li>
               <li>CSS</li>
+              <li>TailwindCSS</li>
               <li>JavaScript</li>
+              <li>TypeScript</li>
               <li>ReactJS</li>
-              <li>Firebase</li>
+              <li>NextJS</li>
             </ul>
           </section>
           <section className="skill-container">
@@ -186,10 +188,12 @@ export default function MainPage() {
             <h4 className="skills-title">Back end development</h4>
             <hr />
             <ul className="skills-list">
-              <li>JavaScript</li>
-              <li>Express.js</li>
-              <li>Node.js</li>
+              <li>NodeJS</li>
+              <li>NestJS</li>
+              <li>Python</li>
+              <li>Golang</li>
               <li>MongoDB</li>
+              <li>PostgreSQL</li>
               <li>Firebase</li>
             </ul>
           </section>
@@ -199,20 +203,58 @@ export default function MainPage() {
             <hr />
             <ul className="skills-list">
               <li>Postman</li>
-              <li>Jira</li>
+              <li>AWS</li>
+              <li>Airflow</li>
               <li>Swagger API</li>
-              <li>Ubuntu OS</li>
-              <li>JWT</li>
+              <li>VSCode Debugger</li>
+              <li>Ubuntu</li>
             </ul>
           </section>
         </div>
       </div>
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">&lt; Projects /&gt;</h3>
-        {/* add dynamic image */}
+        <h3 className="section-name">&lt; School projects /&gt;</h3>
         <div className="projects-container">
           {projects.length > 0 &&
             projects.map((project, index) => {
+              return (
+                <div key={index} className="project-container">
+                  <img src={project.image} alt="" />
+                  <div className="project-data-container">
+                    <h4 className="project-title">{project.title}</h4>
+                    <p>{project.description}</p>
+                    {project.frontEndTechStack && (
+                      <p>
+                        <strong>Front end stack:</strong>{' '}
+                        {project.frontEndTechStack}
+                      </p>
+                    )}
+                    {project.backEndTechStack && (
+                      <p>
+                        <strong>Back end stack:</strong>{' '}
+                        {project.backEndTechStack}
+                      </p>
+                    )}
+                    <a
+                      className="project-link"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> See
+                      project
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </div>
+      <div id="projects" className="portfolio-projects-section">
+        <h3 className="section-name">&lt; Personal projects /&gt;</h3>
+        <div className="projects-container">
+          {personalProjects.length > 0 &&
+            personalProjects.map((project, index) => {
               return (
                 <div key={index} className="project-container">
                   <img src={project.image} alt="" />
@@ -315,6 +357,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
+      <section>© Patrícia Costa da Cruz - 2024</section>
     </div>
   );
 }

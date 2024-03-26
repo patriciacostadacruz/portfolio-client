@@ -10,6 +10,8 @@ import arrowUp from '../images/arrow-up-exp.png';
 import frontend from '../images/frontend.png';
 import backend from '../images/backend.png';
 import tools from '../images/tools.png';
+import brickbro from '../images/brickbro.png';
+import scraping from '../images/scraping.png';
 
 const images = {
   foodfolio,
@@ -23,6 +25,8 @@ const images = {
   frontend,
   backend,
   tools,
+  brickbro,
+  scraping,
 };
 
 export default images;

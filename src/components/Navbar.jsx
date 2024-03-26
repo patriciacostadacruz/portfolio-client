@@ -50,7 +50,7 @@ export default function Navbar() {
   };
 
   const toggleMenu = (event) => {
-    event.stopPropagation(); // Prevent click event propagation
+    event.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
   };
 

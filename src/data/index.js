@@ -6,7 +6,7 @@ const projects = [
     description:
       'Food-Folio is a recipes app which allows users to see a wide variety of recipes and cooking steps, but also allows them to add their own recipes and save their favorites for quick access.',
     frontEndTechStack: 'HTML - CSS - JavaScript - Handlebars',
-    backEndTechStack: 'Node.js - Express.js - MongoDB',
+    backEndTechStack: 'NodeJS - ExpressJS - MongoDB',
     image: images.foodfolio,
     link: 'https://food-folio-app.fly.dev/',
   },
@@ -22,46 +22,48 @@ const projects = [
     title: 'investMate',
     description:
       'investMate is an app which connects entrepreneurs and investors worldwide so that innovative ideas become successful businesses. Browse for projects in your industry and start chatting!',
-    frontEndTechStack: 'HTML - CSS - JavaScript - Charts.js - ReactJS',
-    backEndTechStack: 'Node.js - Express.js - MongoDB',
+    frontEndTechStack: 'HTML - CSS - JavaScript - ChartsJS - ReactJS',
+    backEndTechStack: 'NodeJS - ExpressJS - MongoDB',
     additionalTools: 'Postman',
     image: images.investmate,
     link: 'https://investmate-pro.netlify.app/',
   },
-  // {
-  //   title: 'Firebase recipes app',
-  //   description:
-  //     'Recipes app created as a training for Firebase apps using its different services such as functions, auth, hosting, storage, etc.',
-  //   frontEndTechStack: 'HTML - CSS - JavaScript - ReactJS - Firebase',
-  //   backEndTechStack: 'NodeJS - Express.js - Firebase',
-  //   image: '',
-  //   link: 'https://fir-recipes-3f7d9.web.app/',
-  // },
+];
+
+const personalProjects = [
+  {
+    title: 'Wiki-scrapper',
+    description:
+      'Wiki-scrapper is a small app created to practice scrapping data from the internet with Colly framework. This project scraps from Wikipedia.',
+    backEndTechStack: 'Golang - Colly',
+    image: images.scraping,
+    link: 'https://github.com/patriciacostadacruz/wiki-scrapper',
+  },
 ];
 
 const experiences = [
   {
-    title: 'Web Developer @ Freelance',
-    dates: 'June 2023 - present',
+    title: 'Junior Full Stack Developer @ Brickbro',
+    dates: 'September 2023 - present',
     description:
-      'Working on diverse projects to create innovative and adapted web apps - as well as additional elements such as creating custom cronjobs, integrate specific packages in pre-existing apps,...',
+      "Creation and implementation of innovative, scalable and adapted solutions for the company's commercial premises marketplace and custom CRM. Working on several backend projects to optimize our data and transform it, as well as frontend applications where the geometries bring complexity and the many sources of data we handle bring complexity. Hands on development, code reviews and agile methodologies.",
     tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'JWT',
-      'ReactJS',
-      'Node.js',
-      'Express.js',
+      'TypeScript',
+      'Python',
+      'Golang',
+      'NextJS',
+      'NestJS',
+      'PostgreSQL',
       'MongoDB',
+      'AWS',
+      'Google Maps API',
     ],
-    logo: `${images.interrogationPoint}`,
-    link: '',
+    logo: `${images.brickbro}`,
+    link: 'https://www.brickbro.com/',
   },
   {
     title: 'Technical Application Analyst II @ ADP Iberia',
-    dates: 'October 2021 - present',
+    dates: 'October 2021 - September 2023',
     description:
       'Internal T2 level support for a Time & Attendance software named Enterprise eTime. Diagnose and resolve issues related to software configuration and upgrade, databases, servers, interfaces, federation/login into the system, etc - for high-profile clients.',
     tags: [
@@ -103,4 +105,4 @@ const references = [
   },
 ];
 
-export { projects, experiences, references };
+export { projects, personalProjects, experiences, references };
