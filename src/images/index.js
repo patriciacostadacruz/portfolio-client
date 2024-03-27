@@ -12,6 +12,7 @@ import backend from '../images/backend.png';
 import tools from '../images/tools.png';
 import brickbro from '../images/brickbro.png';
 import scraping from '../images/scraping.png';
+import mystery from '../images/mystery.png';
 
 const images = {
   foodfolio,
@@ -27,6 +28,7 @@ const images = {
   tools,
   brickbro,
   scraping,
+  mystery,
 };
 
 export default images;

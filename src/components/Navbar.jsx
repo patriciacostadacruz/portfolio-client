@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import laptop from '../images/laptop.png';
+import NavbarItem from './molecules/NavbarItem';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,76 +76,31 @@ export default function Navbar() {
               // HOME
             </button>
           </li>
-          <li>
-            <Link
-              className="navbar-options"
-              activeClass="active"
-              to="expertise"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={1000}
-              onClick={handleMenuClick}
-            >
-              // EXPERTISE
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-options"
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={1000}
-              onClick={handleMenuClick}
-            >
-              // PROJECTS
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-options"
-              activeClass="active"
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={1000}
-              onClick={handleMenuClick}
-            >
-              // WORK EXPERIENCE
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-options"
-              activeClass="active"
-              to="references"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={1000}
-              onClick={handleMenuClick}
-            >
-              // REFERENCES
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-options"
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={1000}
-              onClick={handleMenuClick}
-            >
-              // CONTACT
-            </Link>
-          </li>
+          <NavbarItem
+            to="expertise"
+            label="// EXPERTISE"
+            handleMenuClick={handleMenuClick}
+          />
+          <NavbarItem
+            to="projects"
+            label="// PROJECTS"
+            handleMenuClick={handleMenuClick}
+          />
+          <NavbarItem
+            to="experience"
+            label="// WORK EXPERIENCE"
+            handleMenuClick={handleMenuClick}
+          />
+          <NavbarItem
+            to="references"
+            label="// REFERENCES"
+            handleMenuClick={handleMenuClick}
+          />
+          <NavbarItem
+            to="contact"
+            label="// CONTACT"
+            handleMenuClick={handleMenuClick}
+          />
         </ul>
       )}
     </div>

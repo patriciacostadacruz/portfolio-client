@@ -1,6 +1,35 @@
 import images from '../images';
 
-const projects = [
+export const frontSkills = [
+  'HTML',
+  'CSS',
+  'TailwindCSS',
+  'JavaScript',
+  'TypeScript',
+  'ReactJS',
+  'NextJS'
+];
+
+export const backSkills = [
+  'NodeJS',
+  'NestJS',
+  'Python',
+  'Golang',
+  'MongoDB',
+  'PostgreSQL',
+  'Firebase',
+];
+
+export const toolsSkills = [
+  'Postman',
+  'AWS',
+  'Airflow',
+  'Swagger API',
+  'Ubuntu',
+  'VSCode Debugger',
+];
+
+export const projects = [
   {
     title: 'Food-Folio',
     description:
@@ -30,18 +59,34 @@ const projects = [
   },
 ];
 
-const personalProjects = [
+export const personalProjects = [
   {
-    title: 'Wiki-scrapper',
+    title: 'Wiki-scraper',
     description:
-      'Wiki-scrapper is a small app created to practice scrapping data from the internet with Colly framework. This project scraps from Wikipedia.',
+      'Wiki-scrapper is a small app created to practice scraping data from the internet with Colly framework. It uses random user-agents from ScrapeOps and  outputs the data scraped into a JSON file.',
     backEndTechStack: 'Golang - Colly',
     image: images.scraping,
     link: 'https://github.com/patriciacostadacruz/wiki-scrapper',
   },
+  {
+    title: 'To be shared...',
+    description:
+      'I am currently working on creating a Trivia game with Python. Users will be able to play using the command line to answers questions and try to win... stay tuned!',
+    backEndTechStack: 'Python',
+    image: images.mystery,
+    link: '/not-ready-yet',
+  },
+  {
+    title: 'To be shared (again)...',
+    description:
+      'I am also learning about Smart Contracts and working on the creation and sale of a NFT designed by myself... stay tuned! (Yes, again)',
+    backEndTechStack: 'Solidity - Hardhat - OpenZeppelin - Alchemy',
+    image: images.mystery,
+    link: '/not-ready-yet-neither',
+  },
 ];
 
-const experiences = [
+export const experiences = [
   {
     title: 'Junior Full Stack Developer @ Brickbro',
     dates: 'September 2023 - present',
@@ -56,6 +101,7 @@ const experiences = [
       'PostgreSQL',
       'MongoDB',
       'AWS',
+      'Airflow',
       'Google Maps API',
     ],
     logo: `${images.brickbro}`,
@@ -81,7 +127,7 @@ const experiences = [
   },
 ];
 
-const references = [
+export const references = [
   {
     content:
       'From the first day, it was clear that Patri was not just one more student. She is a bright person and has worked hard, and has helped create a great environment with her classmates, always helping anyone in need. Ambitious and perfectionist, Patri has the best mindset for the programming world. I am sure the future holds incredible things for you, Patri!!',
@@ -104,5 +150,3 @@ const references = [
     title: 'EMEA Manager Global Technical Services @ ADP',
   },
 ];
-
-export { projects, personalProjects, experiences, references };
