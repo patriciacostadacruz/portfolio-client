@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import { projects, personalProjects, experiences, references, frontSkills, backSkills, toolsSkills } from '../data';
@@ -10,6 +10,8 @@ import {
   faAnglesDown,
   faDownload,
   faEnvelope,
+  faArrowLeftRotate,
+  faArrowRightRotate,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import SkilllsList from '../components/molecules/SkilllsList';
@@ -24,6 +26,8 @@ export default function MainPage() {
     email: '',
     message: '',
   });
+  const [currentReferenceIndex, setCurrentReferenceIndex] = useState(0);
+  const [carouselIntervalActive, setCarouselIntervalActive] = useState(true);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -71,6 +75,31 @@ export default function MainPage() {
     }
   };
 
+  const handleNextReference = () => {
+    setCurrentReferenceIndex(
+      (prevIndex) => (prevIndex + 1) % references.length
+    );
+    setCarouselIntervalActive(false);
+  };
+
+  const handlePrevReference = () => {
+    setCurrentReferenceIndex((prevIndex) =>
+      prevIndex === 0 ? references.length - 1 : prevIndex - 1
+    );
+    setCarouselIntervalActive(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselIntervalActive) {
+        setCurrentReferenceIndex(
+          (prevIndex) => (prevIndex + 1) % references.length
+        );
+      }
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [carouselIntervalActive]);
+
   return (
     <div className="portfolio-container">
       <div>
@@ -117,28 +146,28 @@ export default function MainPage() {
           />
         </div>
       </div>
+      <div id="experience" className="portfolio-experience-section">
+        <h3 className="section-name">&lt; Experiences /&gt;</h3>
+        <div className="experiences-container">
+          {experiences.map((exp) => {
+            return (
+              <ExperienceContainer
+                key={exp}
+                experience={exp}
+                index={exp}
+                showExperience={showExperience}
+                toggleExperience={toggleExperience}
+              />
+            );
+          })}
+        </div>
+      </div>
       <div id="projects" className="portfolio-projects-section">
         <h3 className="section-name">&lt; Personal projects /&gt;</h3>
         <div className="projects-container">
           {personalProjects.map((project, index) => (
             <ProjectContainer key={index} project={project} />
           ))}
-        </div>
-      </div>
-      <div id="experience" className="portfolio-experience-section">
-        <h3 className="section-name">&lt; Experience /&gt;</h3>
-        <div className="experiences-container">
-          {experiences.map((exp) => {
-            return  (
-            <ExperienceContainer
-              key={exp}
-              experience={exp}
-              index={exp}
-              showExperience={showExperience}
-              toggleExperience={toggleExperience}
-            />
-            );
-          })}
         </div>
       </div>
       <div id="projects" className="portfolio-projects-section">
@@ -152,9 +181,21 @@ export default function MainPage() {
       <div id="references" className="portfolio-references-section">
         <h3 className="section-name">&lt; References /&gt;</h3>
         <div className="references-container">
-          {references.map((ref) => {
-            return <Reference key={ref} reference={ref} />;
-          })}
+          <div className="reference-carousel">
+            <button onClick={handlePrevReference}>
+              <FontAwesomeIcon icon={faArrowLeftRotate} />
+            </button>
+            {references.map((reference, index) => (
+              <Reference
+                key={index}
+                reference={reference}
+                isActive={index === currentReferenceIndex}
+              />
+            ))}
+            <button onClick={handleNextReference}>
+              <FontAwesomeIcon icon={faArrowRightRotate} />
+            </button>
+          </div>
         </div>
       </div>
       <div id="contact" className="portfolio-contact-section">

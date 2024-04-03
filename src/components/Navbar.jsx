@@ -82,13 +82,13 @@ export default function Navbar() {
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
-            to="projects"
-            label="// PROJECTS"
+            to="experience"
+            label="// WORK EXPERIENCE"
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
-            to="experience"
-            label="// WORK EXPERIENCE"
+            to="projects"
+            label="// PROJECTS"
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem

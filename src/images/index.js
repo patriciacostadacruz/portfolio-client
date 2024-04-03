@@ -13,6 +13,8 @@ import tools from '../images/tools.png';
 import brickbro from '../images/brickbro.png';
 import scraping from '../images/scraping.png';
 import mystery from '../images/mystery.png';
+import trivia from '../images/trivia.png';
+import nft from '../images/nft.png';
 
 const images = {
   foodfolio,
@@ -29,6 +31,8 @@ const images = {
   brickbro,
   scraping,
   mystery,
+  trivia,
+  nft,
 };
 
 export default images;

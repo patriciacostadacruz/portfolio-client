@@ -73,7 +73,7 @@ export const personalProjects = [
     description:
       'I am currently working on creating a Trivia game with Python. Users will be able to play using the command line to answers questions and try to win... stay tuned!',
     backEndTechStack: 'Python',
-    image: images.mystery,
+    image: images.trivia,
     link: '/not-ready-yet',
   },
   {
@@ -81,7 +81,7 @@ export const personalProjects = [
     description:
       'I am also learning about Smart Contracts and working on the creation and sale of a NFT designed by myself... stay tuned! (Yes, again)',
     backEndTechStack: 'Solidity - Hardhat - OpenZeppelin - Alchemy',
-    image: images.mystery,
+    image: images.nft,
     link: '/not-ready-yet-neither',
   },
 ];
