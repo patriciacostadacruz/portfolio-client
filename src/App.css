@@ -642,7 +642,7 @@ form button {
   .reference-container,
   .references-container,
   .contact-form {
-    border-radius: 0;
+    border-radius: 5px;
     width: 100vw;
     margin: 0;
   }
@@ -670,7 +670,7 @@ form button {
   .reference-container,
   .experience-detail,
   .experience-header {
-    width: 80%;
+    width: 90%;
   }
 }
 
