@@ -683,6 +683,10 @@ form button {
   }
 }
 
+.references-container {
+  margin-bottom: 60px;
+}
+
 @media only screen and (max-height: 910px) {
   .my-name {
     font-size: 2.7em;
