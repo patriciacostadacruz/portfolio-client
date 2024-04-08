@@ -40,7 +40,7 @@ export const projects = [
     link: 'https://food-folio-app.fly.dev/',
   },
   {
-    title: "Hubble's quest",
+    title: "Hubble's Quest",
     description:
       'After Hubble telescope was launched, alien populations have started being attacked by some alien monster. As part of the Independent Wizards Mission (IWM), you are charged with one mission: go to planet BetaX-2 and kill the enemies to allow friendly and nice aliens to live in peace.',
     frontEndTechStack: 'HTML - CSS - JavaScript',
@@ -61,25 +61,25 @@ export const projects = [
 
 export const personalProjects = [
   {
-    title: 'Wiki-scraper',
+    title: 'wiki-scraper',
     description:
-      'Wiki-scrapper is a small app created to practice scraping data from the internet with Colly framework. It uses random user-agents from ScrapeOps and  outputs the data scraped into a JSON file.',
+      'Wiki-scrapper is a small app created to practice scraping data with Colly framework. It uses random user-agents from ScrapeOps and  outputs the data scraped into a JSON file.',
     backEndTechStack: 'Golang - Colly',
     image: images.scraping,
     link: 'https://github.com/patriciacostadacruz/wiki-scrapper',
   },
   {
-    title: 'To be shared...',
+    title: 'how-much',
     description:
-      'I am currently working on creating a Trivia game with Python. Users will be able to play using the command line to answers questions and try to win... stay tuned!',
-    backEndTechStack: 'Python',
-    image: images.trivia,
+      'I am currently working on creating a currency converter on which you can quickly save your favorite currencies and convert them on the fly... stay tuned!',
+    backEndTechStack: 'Python - Pandas',
+    image: images.currency,
     link: '/not-ready-yet',
   },
   {
-    title: 'To be shared (again)...',
+    title: 'To be shared',
     description:
-      'I am also learning about Smart Contracts and working on the creation and sale of a NFT designed by myself... stay tuned! (Yes, again)',
+      'I am also working on getting to know Smart Contracts and on the creation and sale of a NFT designed by myself... stay tuned! (Yes, again)',
     backEndTechStack: 'Solidity - Hardhat - OpenZeppelin - Alchemy',
     image: images.nft,
     link: '/not-ready-yet-neither',

@@ -13,7 +13,7 @@ import tools from '../images/tools.png';
 import brickbro from '../images/brickbro.png';
 import scraping from '../images/scraping.png';
 import mystery from '../images/mystery.png';
-import trivia from '../images/trivia.png';
+import currency from '../images/currency-3.png';
 import nft from '../images/nft.png';
 
 const images = {
@@ -31,7 +31,7 @@ const images = {
   brickbro,
   scraping,
   mystery,
-  trivia,
+  currency,
   nft,
 };
 

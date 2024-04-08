@@ -10,8 +10,8 @@ import {
   faAnglesDown,
   faDownload,
   faEnvelope,
-  faArrowLeftRotate,
-  faArrowRightRotate,
+  faArrowLeft,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import SkilllsList from '../components/molecules/SkilllsList';
@@ -183,7 +183,7 @@ export default function MainPage() {
         <div className="references-container">
           <div className="reference-carousel">
             <button onClick={handlePrevReference}>
-              <FontAwesomeIcon icon={faArrowLeftRotate} />
+              <FontAwesomeIcon icon={faArrowLeft} />
             </button>
             {references.map((reference, index) => (
               <Reference
@@ -193,7 +193,7 @@ export default function MainPage() {
               />
             ))}
             <button onClick={handleNextReference}>
-              <FontAwesomeIcon icon={faArrowRightRotate} />
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
         </div>
