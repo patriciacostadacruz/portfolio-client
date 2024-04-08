@@ -113,7 +113,6 @@ export default function MainPage() {
         <p className="my-presentation">
           Full Stack Developer 📍 Barcelona, Spain
         </p>
-        <p>~ Website undergoing reconstruction...</p>
       </div>
       <Link
         className="navbar-options"
@@ -171,7 +170,7 @@ export default function MainPage() {
         </div>
       </div>
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">&lt; Old school projects /&gt;</h3>
+        <h3 className="section-name">&lt; School projects /&gt;</h3>
         <div className="projects-container">
           {projects.map((project, index) => (
             <ProjectContainer key={index} project={project} />
@@ -198,6 +197,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
+      <hr className="separator" />
       <div id="contact" className="portfolio-contact-section">
         <div className="contact-section">
           <h3 className="contact-sentance">Feel free to reach out!</h3>
