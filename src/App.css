@@ -98,7 +98,7 @@ body {
 
 .section-name {
   font-size: 3em;
-  margin: 100px 0;
+  margin: 40px 0;
 }
 
 button {
@@ -509,7 +509,7 @@ hr {
 
 .reference-carousel button {
   font-size: smaller;
-  text-decoration: dotted;
+  color: var(--dark-grey-blue)
 }
 
 .reference-carousel button:hover {
@@ -600,8 +600,8 @@ form button {
 
 .separator {
   border: 1px solid var(--dark-grey-blue);
-  width: 40%;
-  margin: auto;
+  width: 25%;
+  margin: 100px auto;
   box-shadow: 10px 10px 10px var(--dark-grey-blue);
 }
 
@@ -658,6 +658,10 @@ form button {
   .error-section img {
     width: 300px;
   }
+
+  .separator {
+  margin: 100px auto 0 auto;
+}
 }
 
 @media only screen and (max-width: 440px) {
@@ -666,7 +670,7 @@ form button {
   }
 
   .section-name {
-    font-size: 2.1em;
+    font-size: 1.8em;
   }
 
   .skill-container,
@@ -678,7 +682,7 @@ form button {
   .references-container,
   .contact-form {
     border-radius: 5px;
-    width: 100vw;
+    width: 100%;
     margin: 0;
   }
 }
@@ -760,5 +764,10 @@ form button {
 
   .hamburger-menu.open span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .blur-content {
+    filter: blur(5px);
+    pointer-events: none;
   }
 }

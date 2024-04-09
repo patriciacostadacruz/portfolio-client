@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import { projects, personalProjects, experiences, references, frontSkills, backSkills, toolsSkills } from '../data';
 import images from '../images';
@@ -7,7 +6,6 @@ import myCurriculum from '../files/pcc-cv.pdf';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faAnglesDown,
   faDownload,
   faEnvelope,
   faArrowLeft,
@@ -114,17 +112,7 @@ export default function MainPage() {
           Full Stack Developer 📍 Barcelona, Spain
         </p>
       </div>
-      <Link
-        className="navbar-options"
-        activeClass="active"
-        to="expertise"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={1000}
-      >
-        <FontAwesomeIcon className="arrow-down" icon={faAnglesDown} />
-      </Link>
+      <hr className="separator" />
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">&lt; Expertise /&gt;</h3>
         <div className="skills-container">
@@ -145,6 +133,7 @@ export default function MainPage() {
           />
         </div>
       </div>
+      <hr className="separator" />
       <div id="experience" className="portfolio-experience-section">
         <h3 className="section-name">&lt; Experiences /&gt;</h3>
         <div className="experiences-container">
@@ -161,6 +150,7 @@ export default function MainPage() {
           })}
         </div>
       </div>
+      <hr className="separator" />
       <div id="projects" className="portfolio-projects-section">
         <h3 className="section-name">&lt; Personal projects /&gt;</h3>
         <div className="projects-container">
@@ -169,6 +159,7 @@ export default function MainPage() {
           ))}
         </div>
       </div>
+      <hr className="separator" />
       <div id="projects" className="portfolio-projects-section">
         <h3 className="section-name">&lt; School projects /&gt;</h3>
         <div className="projects-container">
@@ -177,6 +168,7 @@ export default function MainPage() {
           ))}
         </div>
       </div>
+      <hr className="separator" />
       <div id="references" className="portfolio-references-section">
         <h3 className="section-name">&lt; References /&gt;</h3>
         <div className="references-container">

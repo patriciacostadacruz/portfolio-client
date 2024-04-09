@@ -61,6 +61,15 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const portfolioContainer = document.querySelector('.portfolio-container');
+    if (portfolioContainer && isMenuOpen) {
+      portfolioContainer.classList.toggle('blur-content');
+    } else if (!isMenuOpen) {
+      portfolioContainer.classList.remove('blur-content');
+    }
+  }, [isMenuOpen]);
+
   return (
     <div className="navbar-container">
       <div className="hamburger-menu" onClick={toggleMenu}>
