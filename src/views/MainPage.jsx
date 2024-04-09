@@ -14,7 +14,7 @@ import {
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import SkilllsList from '../components/molecules/SkilllsList';
+import SkillsList from '../components/molecules/SkillsList';
 import ProjectContainer from '../components/templates/ProjectContainer';
 import ExperienceContainer from '../components/templates/ExperienceContainer';
 import Reference from '../components/templates/References';
@@ -128,18 +128,18 @@ export default function MainPage() {
       <div id="expertise" className="portfolio-expertise-section">
         <h3 className="section-name">&lt; Expertise /&gt;</h3>
         <div className="skills-container">
-          <SkilllsList
+          <SkillsList
             image={images.frontend}
             skillsTitle="Front end development"
             skillsArray={frontSkills}
           />
-          <SkilllsList
+          <SkillsList
             image={images.backend}
             skillsTitle="Back end development"
             skillsArray={backSkills}
           />
-          <SkilllsList
-            image={images.frontend}
+          <SkillsList
+            image={images.tools}
             skillsTitle="Tools & softwares"
             skillsArray={toolsSkills}
           />

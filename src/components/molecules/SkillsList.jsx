@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SkilllsList({ image, skillsTitle, skillsArray}) {
+export default function SkillsList({ image, skillsTitle, skillsArray}) {
   return (
     <section className="skill-container">
       <img src={image} alt="" />
