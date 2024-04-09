@@ -685,11 +685,16 @@ form button {
     width: 100%;
     margin: 0;
   }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+  }
 }
 
-.references-container {
-  margin-bottom: 60px;
-}
+
 
 @media only screen and (max-height: 910px) {
   .my-name {
@@ -705,6 +710,10 @@ form button {
 
   .experience-tags {
     gap: 5px;
+  }
+
+  .section-name {
+    font-size: 2.1em;
   }
 }
 
