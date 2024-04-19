@@ -4,10 +4,13 @@ import { animateScroll as scroll } from 'react-scroll';
 import { toast } from 'react-hot-toast';
 import laptop from '../images/laptop.png';
 import NavbarItem from './molecules/NavbarItem';
+import { useTranslation } from 'react-i18next';
+import LanguageBar from './molecules/LanguageBar';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScreenWide, setIsScreenWide] = useState(window.innerWidth > 900);
+  const { t } = useTranslation("global")
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -45,7 +48,7 @@ export default function Navbar() {
   };
 
   const handleClick = () => {
-    toast('Nothing to see here... Keep scrolling!', {
+    toast(t("toaster.navbar"), {
       icon: '👋',
     });
   };
@@ -82,34 +85,35 @@ export default function Navbar() {
           <img src={laptop} alt="Laptop icon" onClick={handleClick} />
           <li>
             <button className="navbar-button" onClick={handleScrollToTop}>
-              // HOME
+              // {t('home').toUpperCase()}
             </button>
           </li>
           <NavbarItem
             to="expertise"
-            label="// EXPERTISE"
+            label={`// ${t('expertise').toUpperCase()}`}
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
             to="experience"
-            label="// WORK EXPERIENCE"
+            label={`// ${t('experience').toUpperCase()}`}
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
             to="projects"
-            label="// PROJECTS"
+            label={`// ${t('projects').toUpperCase()}`}
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
             to="references"
-            label="// REFERENCES"
+            label={`// ${t('references').toUpperCase()}`}
             handleMenuClick={handleMenuClick}
           />
           <NavbarItem
             to="contact"
-            label="// CONTACT"
+            label={`// ${t('contact').toUpperCase()}`}
             handleMenuClick={handleMenuClick}
           />
+          <LanguageBar />
         </ul>
       )}
     </div>

@@ -3,8 +3,10 @@
 :root {
   --dark-grey-blue: #1b1b22;
   --grey-light: #474747;
+  --grey-lightest: rgb(170, 170, 170);
   --orange: rgb(255, 84, 21);
-  --orange-light: rgb(251, 203, 189);
+  --orange-light: rgb(224, 133, 100);
+  --orange-lightest: rgb(251, 203, 189);
 }
 
 * {
@@ -209,6 +211,28 @@ a {
   }
 }
 
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  color: white;
+  background-color: var(--grey-lightest);
+  border-radius: 8px;
+}
+
+.lang-btn:hover,
+.active-lang {
+  background-color: var(--orange);
+}
+
+.globe {
+  color: var(--orange-light)
+}
+
 /****** INTRO ******/
 
 .portfolio-home-section {
@@ -386,7 +410,7 @@ hr {
 }
 
 .experience-detail {
-  background-color: var(--orange-light);
+  background-color: var(--orange-lightest);
   border-radius: 10px;
   width: 50%;
   margin-bottom: 10px;

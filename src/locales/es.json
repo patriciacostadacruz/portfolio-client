@@ -1,0 +1,80 @@
+{
+  "home": "Inicio",
+  "expertise": "Conocimientos",
+  "experience": "Experiencia",
+  "projects": "Proyectos",
+  "references": "Referencias",
+  "contact": "Contacto",
+  "toaster": {
+    "navbar": "Nada que ver aquí... ¡Sigue desplazándote!",
+    "missing-fields": "Se requieren nombre y mensaje.",
+    "invalid-email": "Dirección de correo electrónico inválida.",
+    "success": "¡Email enviado exitosamente!",
+    "error": "Error al enviar el email:"
+  },
+  "error-page": {
+    "error-message": "Lo siento, esta página no existe.",
+    "back-home": "Volver a la página de inicio"
+  },
+  "intro": {
+    "title": "Desarrolladora Full Stack 📍 Barcelona"
+  },
+  "expertise-section": {
+    "frontend": "Desarrollo front-end",
+    "backend": "Desarrollo back-end",
+    "tools-softwares": "Herramientas"
+  },
+  "experience-section": {
+    "skills-used": "Principales habilidades utilizadas:",
+    "exp1": {
+      "title": "Desarrolladora Full Stack Junior @ Brickbro",
+      "dates": "Septiembre 2023 - presente",
+      "description": "Creación e implementación de soluciones innovadoras, escalables y adaptadas para el mercado de locales comerciales y CRM personalizado de la empresa. Trabajando en varios proyectos de backend para optimizar nuestros datos y transformarlos, así como aplicaciones frontend donde las geometrías traen complejidad y las diversas fuentes de datos que manejamos también. Desarrollo práctico, revisiones de código y metodologías ágiles."
+    },
+    "exp2": {
+      "title": "Analista Técnico de Aplicaciones II @ ADP Iberia",
+      "dates": "Octubre 2021 - Septiembre 2023",
+      "description": "Soporte interno de nivel T2 para un software de control de tiempo y asistencia llamado Enterprise eTime. Diagnosticar y resolver problemas relacionados con la configuración y actualización del software, bases de datos, servidores, interfaces, federación/inicio de sesión en el sistema, etc., para clientes de alto perfil."
+    }
+  },
+  "see-project": "Ver proyecto",
+  "personal-projects": {
+    "title": "Proyectos personales",
+    "projects": {
+      "description1": "Wiki-scrapper es una pequeña aplicación creada para practicar el scraping de datos con el framework Colly. Utiliza user-agents aleatorios de ScrapeOps y guarda los datos extraídos en un archivo JSON.",
+      "description2": "Actualmente estoy trabajando en la creación de un convertidor de divisas en el que podrás guardar rápidamente tus divisas favoritas y convertirlas al instante... ¡mantente atento!",
+      "description3": "También estoy trabajando en conocer los Smart Contracts y en la creación y venta de un NFT diseñado por mí misma... ¡mantente atento! (Sí, de nuevo)"
+    }
+  },
+  "school-projects": {
+    "title": "Proyectos escolares",
+    "projects": {
+      "description4": "Food-Folio es una aplicación de recetas que permite a los usuarios ver una amplia variedad de recetas y pasos de cocina, y también les permite agregar sus propias recetas y guardar sus favoritas para acceder rápidamente a ellas.",
+      "description5": "Después de que el telescopio Hubble fue lanzado, las poblaciones alienígenas han comenzado a ser atacadas por algún monstruo alienígena. Como parte de la Misión de Magos Independientes (IWM), tienes una misión: ir al planeta BetaX-2 y eliminar a los enemigos para permitir que los alienígenas amigables y simpáticos vivan en paz.",
+      "description6": "investMate es una aplicación que conecta a emprendedores e inversores de todo el mundo para que las ideas innovadoras se conviertan en negocios exitosos. ¡Busca proyectos en tu industria y comienza a chatear!"
+    }
+  },
+  "references-section": {
+    "ref1": {
+      "content": "Desde el primer día, quedó claro que Patri no era solo otra estudiante más. Es una persona brillante que ha trabajado duro y ha ayudado a crear un gran ambiente con sus compañeros de clase, siempre ayudando a quien lo necesitara. Ambiciosa y perfeccionista, Patri tiene la mentalidad ideal para el mundo de la programación. ¡Estoy seguro de que el futuro te depara cosas increíbles, Patri!",
+      "title": "Desarrolladora web Full Stack y profesora @ Freelance & IronHack"
+    },
+    "ref2": {
+      "content": "Patricia es emprendedora y proactiva. Tiene una buena actitud y es bien vista por sus compañeros de equipo. Admiro su pasión por el desarrollo y sé que tendrá un impacto positivo donde sea que vaya.",
+      "title": "Gerente Senior de Servicios Técnicos Globales @ ADP"
+    },
+    "ref3": {
+      "content": "Si combinas el trabajo duro, la mentalidad analítica, la actitud positiva, la disposición para ayudar y la búsqueda constante de los mejores resultados... obtienes a Patricia. Su trabajo siempre superó mis expectativas y durante el último año y medio tuve el placer de guiar a Patricia, quien dejó una gran huella en nuestro equipo. Patricia es muy motivada, aprende rápido, tiene una ética de trabajo excelente y grandes sueños. Su humor y empatía fomentaron un ambiente laboral reconfortante. No tengo dudas de que Patricia seguirá destacándose en sus futuros proyectos y la recomiendo encarecidamente a cualquier empleador potencial.",
+      "title": "Gerente EMEA de Servicios Técnicos Globales @ ADP"
+    }
+  },
+  "contact-section": {
+    "disclaimer": "¡No dudes en ponerte en contacto!",
+    "cv-action": "Descarga mi CV",
+    "email-disclaimer": "También puedes enviarme un correo electrónico",
+    "name-field": "Tu nombre:",
+    "email-field": "Tu correo electrónico:",
+    "message-field": "Tu mensaje:",
+    "send-email": "Enviar correo electrónico"
+  }
+}

@@ -16,6 +16,7 @@ import SkillsList from '../components/molecules/SkillsList';
 import ProjectContainer from '../components/templates/ProjectContainer';
 import ExperienceContainer from '../components/templates/ExperienceContainer';
 import Reference from '../components/templates/References';
+import { useTranslation } from 'react-i18next';
 
 export default function MainPage() {
   const [showExperience, setShowExperience] = useState(null);
@@ -26,6 +27,8 @@ export default function MainPage() {
   });
   const [currentReferenceIndex, setCurrentReferenceIndex] = useState(0);
   const [carouselIntervalActive, setCarouselIntervalActive] = useState(true);
+
+  const { t } = useTranslation("global");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,12 +42,12 @@ export default function MainPage() {
     e.preventDefault();
     const { name, email, message } = formData;
     if (!name || !message) {
-      toast.error('Name and message are required.');
+      toast.error(t("toaster.missing-fields"));
       return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      toast.error('Invalid email address.');
+      toast.error(t("toaster.invalid-email"));
       return;
     }
     try {
@@ -54,14 +57,14 @@ export default function MainPage() {
         e.target,
         '1-bfXLBdlmKTvIDHx'
       );
-      toast.success('Email sent successfully!');
+      toast.success(t("toaster.success"));
       setFormData({
         name: '',
         email: '',
         message: '',
       });
     } catch (error) {
-      toast.error('Error sending email...', error);
+      toast.error(t('toaster.error'), error);
     }
   };
 
@@ -108,34 +111,32 @@ export default function MainPage() {
       <div id="home" className="portfolio-home-section">
         <img className="my-avatar" src={images.myPic} alt="My avatar" />
         <h1 className="my-name">Patrícia Costa da Cruz</h1>
-        <p className="my-presentation">
-          Full Stack Developer 📍 Barcelona, Spain
-        </p>
+        <p className="my-presentation">{t('intro.title')}</p>
       </div>
       <hr className="separator" />
       <div id="expertise" className="portfolio-expertise-section">
-        <h3 className="section-name">&lt; Expertise /&gt;</h3>
+        <h3 className="section-name">&lt; {t('expertise')} /&gt;</h3>
         <div className="skills-container">
           <SkillsList
             image={images.frontend}
-            skillsTitle="Front end development"
+            skillsTitle={t('expertise-section.frontend')}
             skillsArray={frontSkills}
           />
           <SkillsList
             image={images.backend}
-            skillsTitle="Back end development"
+            skillsTitle={t('expertise-section.backend')}
             skillsArray={backSkills}
           />
           <SkillsList
             image={images.tools}
-            skillsTitle="Tools & softwares"
+            skillsTitle={t('expertise-section.tools-softwares')}
             skillsArray={toolsSkills}
           />
         </div>
       </div>
       <hr className="separator" />
       <div id="experience" className="portfolio-experience-section">
-        <h3 className="section-name">&lt; Experiences /&gt;</h3>
+        <h3 className="section-name">&lt; {t('experience')} /&gt;</h3>
         <div className="experiences-container">
           {experiences.map((exp) => {
             return (
@@ -152,7 +153,9 @@ export default function MainPage() {
       </div>
       <hr className="separator" />
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">&lt; Personal projects /&gt;</h3>
+        <h3 className="section-name">
+          &lt; {t('personal-projects.title')} /&gt;
+        </h3>
         <div className="projects-container">
           {personalProjects.map((project, index) => (
             <ProjectContainer key={index} project={project} />
@@ -161,7 +164,9 @@ export default function MainPage() {
       </div>
       <hr className="separator" />
       <div id="projects" className="portfolio-projects-section">
-        <h3 className="section-name">&lt; School projects /&gt;</h3>
+        <h3 className="section-name">
+          &lt; {t('school-projects.title')} /&gt;
+        </h3>
         <div className="projects-container">
           {projects.map((project, index) => (
             <ProjectContainer key={index} project={project} />
@@ -170,7 +175,7 @@ export default function MainPage() {
       </div>
       <hr className="separator" />
       <div id="references" className="portfolio-references-section">
-        <h3 className="section-name">&lt; References /&gt;</h3>
+        <h3 className="section-name">&lt; {t('references')} /&gt;</h3>
         <div className="references-container">
           <div className="reference-carousel">
             <button onClick={handlePrevReference}>
@@ -192,7 +197,9 @@ export default function MainPage() {
       <hr className="separator" />
       <div id="contact" className="portfolio-contact-section">
         <div className="contact-section">
-          <h3 className="contact-sentance">Feel free to reach out!</h3>
+          <h3 className="contact-sentance">
+            {t('contact-section.disclaimer')}
+          </h3>
           <div className="contact-methods">
             <a
               href="https://www.linkedin.com/in/patricia-costa-da-cruz/"
@@ -209,16 +216,17 @@ export default function MainPage() {
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
             <a href={myCurriculum} download="patricia-costa-da-cruz_CV">
-              <FontAwesomeIcon icon={faDownload} /> Download my CV{' '}
+              <FontAwesomeIcon icon={faDownload} />{' '}
+              {t('contact-section.cv-action')}{' '}
             </a>
           </div>
         </div>
         <div className="contact-section">
           <div className="contact-form">
-            <h4>You can also email me here:</h4>
+            <h4>{t('contact-section.email-disclaimer')}</h4>
             <form onSubmit={sendEmail}>
               <label>
-                Your name
+                {t('contact-section.name-field')}
                 <input
                   type="text"
                   name="name"
@@ -227,7 +235,7 @@ export default function MainPage() {
                 />
               </label>
               <label>
-                Your email
+                {t('contact-section.email-field')}
                 <input
                   type="email"
                   name="email"
@@ -236,7 +244,7 @@ export default function MainPage() {
                 />
               </label>
               <label>
-                Your message
+                {t('contact-section.message-field')}
                 <textarea
                   name="message"
                   value={formData.message}
@@ -245,7 +253,8 @@ export default function MainPage() {
               </label>
               <button type="submit" className="email-button">
                 {' '}
-                <FontAwesomeIcon icon={faEnvelope} /> Send email
+                <FontAwesomeIcon icon={faEnvelope} />{' '}
+                {t('contact-section.send-email')}
               </button>
             </form>
           </div>
