@@ -253,11 +253,10 @@ a {
 
 .my-name {
   margin: 50px 0;
-  font-size: 4em;
   line-height: 54px;
+  text-transform: uppercase;
 }
 
-.my-name,
 .my-presentation {
   text-transform: uppercase;
   margin: 20px;
