@@ -80,6 +80,7 @@ export default function Navbar() {
         <span></span>
         <span></span>
       </div>
+      <p className="navbar-initials">PCC</p>
       {(isMenuOpen || isScreenWide) && (
         <ul className="navbar-items" ref={menuRef}>
           <img src={laptop} alt="Laptop icon" onClick={handleClick} />

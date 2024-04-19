@@ -19,7 +19,7 @@ import Reference from '../components/templates/References';
 import { useTranslation } from 'react-i18next';
 
 export default function MainPage() {
-  const [showExperience, setShowExperience] = useState(null);
+  const [showExperience, setShowExperience] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -138,12 +138,12 @@ export default function MainPage() {
       <div id="experience" className="portfolio-experience-section">
         <h3 className="section-name">&lt; {t('experience')} /&gt;</h3>
         <div className="experiences-container">
-          {experiences.map((exp) => {
+          {experiences.map((exp, index) => {
             return (
               <ExperienceContainer
                 key={exp}
                 experience={exp}
-                index={exp}
+                index={index}
                 showExperience={showExperience}
                 toggleExperience={toggleExperience}
               />
