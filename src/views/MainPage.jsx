@@ -103,7 +103,7 @@ export default function MainPage() {
 
   return (
     <div className="portfolio-container">
-      <div>
+      <div className="wave-container">
         <div className="wave"></div>
         <div className="wave"></div>
         <div className="wave"></div>

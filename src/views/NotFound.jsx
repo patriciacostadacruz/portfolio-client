@@ -9,9 +9,9 @@ export default function NotFound() {
   return (
     <div className="error-section">
       <img src={errorImg} alt="Error png" />
-      <p>Sorry, this page does not exist.</p>
+      <p>{t('error-page.error-message')}</p>
       <Link to="/" className="error-home-button">
-        Back to home page
+        {t('error-page.back-home')}
       </Link>
     </div>
   );
